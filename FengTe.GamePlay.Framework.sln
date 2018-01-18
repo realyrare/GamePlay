@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengTe.GamePlay.Web", "FengTe.GamePlay.Web\FengTe.GamePlay.Web.csproj", "{8F48369D-B027-469D-9EF8-76C6D51C450A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengTe.GamePlay.Repository", "FengTe.GamePlay.Repository\FengTe.GamePlay.Repository.csproj", "{E5C0AFB2-48D6-4793-9BD4-7C62FB8BC152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengTe.GamePlay.IRepository", "FengTe.GamePlay.IRepository\FengTe.GamePlay.IRepository.csproj", "{B8A420C2-0A06-4A4C-A82B-AE06C915DAE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengTe.GamePlay.Service", "FengTe.GamePlay.Service\FengTe.GamePlay.Service.csproj", "{AB72E6C4-A84E-4DA3-820B-5ADA94C9921C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengTe.GamePlay.Entity", "FengTe.GamePlay.Entity\FengTe.GamePlay.Entity.csproj", "{9A68BFCB-367E-4466-9D83-069309176817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengTe.GamePlay.Utility", "FengTe.GamePlay.Utility\FengTe.GamePlay.Utility.csproj", "{38C1F6ED-2BAE-4D8A-9A3B-502D513CA8BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FengTe.GamePlay.IService", "FengTe.GamePlay.IService\FengTe.GamePlay.IService.csproj", "{DA535052-A0A7-4D25-8916-F601B9A7D442}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F48369D-B027-469D-9EF8-76C6D51C450A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F48369D-B027-469D-9EF8-76C6D51C450A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F48369D-B027-469D-9EF8-76C6D51C450A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F48369D-B027-469D-9EF8-76C6D51C450A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C0AFB2-48D6-4793-9BD4-7C62FB8BC152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C0AFB2-48D6-4793-9BD4-7C62FB8BC152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C0AFB2-48D6-4793-9BD4-7C62FB8BC152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C0AFB2-48D6-4793-9BD4-7C62FB8BC152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8A420C2-0A06-4A4C-A82B-AE06C915DAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8A420C2-0A06-4A4C-A82B-AE06C915DAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8A420C2-0A06-4A4C-A82B-AE06C915DAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8A420C2-0A06-4A4C-A82B-AE06C915DAE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB72E6C4-A84E-4DA3-820B-5ADA94C9921C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB72E6C4-A84E-4DA3-820B-5ADA94C9921C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB72E6C4-A84E-4DA3-820B-5ADA94C9921C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB72E6C4-A84E-4DA3-820B-5ADA94C9921C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A68BFCB-367E-4466-9D83-069309176817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A68BFCB-367E-4466-9D83-069309176817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A68BFCB-367E-4466-9D83-069309176817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A68BFCB-367E-4466-9D83-069309176817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38C1F6ED-2BAE-4D8A-9A3B-502D513CA8BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38C1F6ED-2BAE-4D8A-9A3B-502D513CA8BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38C1F6ED-2BAE-4D8A-9A3B-502D513CA8BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38C1F6ED-2BAE-4D8A-9A3B-502D513CA8BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA535052-A0A7-4D25-8916-F601B9A7D442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA535052-A0A7-4D25-8916-F601B9A7D442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA535052-A0A7-4D25-8916-F601B9A7D442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA535052-A0A7-4D25-8916-F601B9A7D442}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

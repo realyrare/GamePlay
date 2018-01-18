@@ -1,0 +1,7 @@
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.IService\bin\Debug\FengTe.GamePlay.IService.dll
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.IService\bin\Debug\FengTe.GamePlay.IService.pdb
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.IService\bin\Debug\FengTe.GamePlay.Entity.dll
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.IService\bin\Debug\FengTe.GamePlay.Entity.pdb
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.IService\obj\Debug\FengTe.GamePlay.IService.csprojResolveAssemblyReference.cache
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.IService\obj\Debug\FengTe.GamePlay.IService.dll
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.IService\obj\Debug\FengTe.GamePlay.IService.pdb

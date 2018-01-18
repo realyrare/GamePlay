@@ -1,0 +1,4 @@
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\bin\Debug\FengTe.GamePlay.Entity.dll
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\bin\Debug\FengTe.GamePlay.Entity.pdb
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\obj\Debug\FengTe.GamePlay.Entity.dll
+E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\obj\Debug\FengTe.GamePlay.Entity.pdb
