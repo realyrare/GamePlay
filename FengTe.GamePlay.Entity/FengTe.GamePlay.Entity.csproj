@@ -40,6 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountGrade.cs" />
+    <Compile Include="Action.cs" />
+    <Compile Include="ComplainInfo.cs" />
+    <Compile Include="Customer_Evaluate.cs" />
+    <Compile Include="EatChook_GameResult.cs" />
+    <Compile Include="Focus.cs" />
     <Compile Include="Params\QueryParam.cs" />
     <Compile Include="Params\Sort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

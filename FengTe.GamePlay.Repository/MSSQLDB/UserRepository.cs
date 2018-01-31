@@ -26,8 +26,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
             using (var conn=ConnectionFactory.Connection())
             {
                 //string sql = @"select * from users ";
-              return  conn.Query<Users>("select *  from users");
-                
+              return  conn.Query<Users>("select *  from users");                
             }
         }
 
@@ -55,9 +54,6 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
         {
             throw new NotImplementedException();
         }
-
-      
-
         public bool Update(Users entity)
         {
             throw new NotImplementedException();
