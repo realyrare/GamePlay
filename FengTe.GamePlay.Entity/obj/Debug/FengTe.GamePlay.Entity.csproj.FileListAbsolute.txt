@@ -2,3 +2,8 @@ E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\bin\Debug\Fen
 E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\bin\Debug\FengTe.GamePlay.Entity.pdb
 E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\obj\Debug\FengTe.GamePlay.Entity.dll
 E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\obj\Debug\FengTe.GamePlay.Entity.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\bin\Debug\FengTe.GamePlay.Entity.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\bin\Debug\FengTe.GamePlay.Entity.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\obj\Debug\FengTe.GamePlay.Entity.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\obj\Debug\FengTe.GamePlay.Entity.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Entity\obj\Debug\FengTe.GamePlay.Entity.csprojResolveAssemblyReference.cache

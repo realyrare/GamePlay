@@ -1,0 +1,23 @@
+﻿.welcome_nav {
+    width:100%;
+    height:160px;
+    background-color:#fff;
+    border-radius:6px;
+    padding:10px 30px;
+    margin-bottom:20px;
+}
+.welcome_nav ul{
+    font-size:0;
+}
+.welcome_nav ul li{
+    width:100px;
+    text-align:center;
+    cursor:pointer;
+    font-size:14px;
+}
+.welcome_nav ul li:hover p{
+    color:#ffa800;
+}
+.welcome_nav ul li+li{
+    margin-left:20px;
+}

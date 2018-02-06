@@ -9,3 +9,14 @@ E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\bin\Debug
 E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\obj\Debug\FengTe.GamePlay.Repository.csprojResolveAssemblyReference.cache
 E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\obj\Debug\FengTe.GamePlay.Repository.dll
 E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\obj\Debug\FengTe.GamePlay.Repository.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\bin\Debug\FengTe.GamePlay.Repository.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\bin\Debug\FengTe.GamePlay.Repository.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\bin\Debug\Dapper.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\bin\Debug\FengTe.GamePlay.Entity.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\bin\Debug\FengTe.GamePlay.IRepository.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\bin\Debug\FengTe.GamePlay.Entity.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\bin\Debug\FengTe.GamePlay.IRepository.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\bin\Debug\Dapper.xml
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\obj\Debug\FengTe.GamePlay.Repository.csprojResolveAssemblyReference.cache
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\obj\Debug\FengTe.GamePlay.Repository.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Repository\obj\Debug\FengTe.GamePlay.Repository.pdb

@@ -1,0 +1,406 @@
+﻿.order_record {
+    width: 100%;
+    min-height: 1013px;
+    border-radius: 6px;
+    background-color: #fff;
+    padding: 20px;
+}
+.order_type{
+    margin:20px 0;
+}
+.order_type .type_btn{
+    display:inline-block;
+    width:50%;
+    box-sizing:border-box;
+    text-align:center;
+    border:1px solid #e5e5e5;
+    line-height:38px;
+    cursor:pointer;
+}
+.order_type .type_btn.top_btn.active{
+    background-color:#ffc907;
+    border:none;
+    line-height:40px;
+}
+.order_type .type_btn.recreation_btn.active{
+    background-color:#2e9df7;
+    border:none;
+    line-height:40px;
+}
+.order_type .type_btn i{
+    display:inline-block;
+    width:20px;
+    height:36px;
+    vertical-align:middle;
+}
+.order_type .type_btn.top_btn i{
+    background:url(/Content/Img/sf-icon.png) center center no-repeat;
+}
+.order_type .type_btn.recreation_btn i{
+    background:url(/Content/Img/pw-icon.png) center center no-repeat;
+}
+.order_top_search{
+    font-size:0;
+}
+.order_top_search span{
+    font-size:14px;
+}
+.order_top_search .name_select{
+    width:200px;
+    height:30px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    cursor:pointer;
+    appearance:none;
+    -moz-appearance:none;/*?Firefox?*/
+    -webkit-appearance:none;/*?Safari?和?Chrome?*/
+    background:#fff url(/Content/Img/user_arrows.png) 176px center no-repeat;
+    padding-left:20px;
+    margin:0 20px 0 10px;
+}
+.order_top_search .state_select{
+    width:120px;
+    height:30px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    cursor:pointer;
+    appearance:none;
+    -moz-appearance:none;/*?Firefox?*/
+    -webkit-appearance:none;/*?Safari?和?Chrome?*/
+    background:#fff url(/Content/Img/user_arrows.png) 96px center no-repeat;
+    padding-left:10px;
+    margin:0 20px 0 10px;
+}
+.order_top_search .key_inp{
+    width:230px;
+    height:30px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    background:#fff;
+    padding-left:20px;
+
+    margin:0 8px 0 9px;
+}
+.order_top_search .order_top_btn{
+    width:58px;
+    height:30px;
+    border:none;
+    border-radius:4px;
+    outline:none;
+    background:#ffc907;
+    cursor:pointer;
+}
+.order_top_search .order_top_btn:hover{
+    background:#fcd538;
+}
+
+.order_recreation_search{
+    font-size:0;
+}
+.order_recreation_search span{
+    font-size:14px;
+}
+.order_recreation_search .mold_select{
+    width:80px;
+    height:30px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    cursor:pointer;
+    appearance:none;
+    -moz-appearance:none;/*?Firefox?*/
+    -webkit-appearance:none;/*?Safari?和?Chrome?*/
+    background:#fff url(/Content/Img/user_arrows.png) 56px center no-repeat;
+    padding-left:10px;
+    margin:0 20px 0 10px;
+}
+.order_recreation_search .name_select{
+    width:180px;
+    height:30px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    cursor:pointer;
+    appearance:none;
+    -moz-appearance:none;/*?Firefox?*/
+    -webkit-appearance:none;/*?Safari?和?Chrome?*/
+    background:#fff url(/Content/Img/user_arrows.png) 156px center no-repeat;
+    padding-left:20px;
+    margin:0 20px 0 10px;
+}
+.order_recreation_search .state_select{
+    width:80px;
+    height:30px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    cursor:pointer;
+    appearance:none;
+    -moz-appearance:none;/*?Firefox?*/
+    -webkit-appearance:none;/*?Safari?和?Chrome?*/
+    background:#fff url(/Content/Img/user_arrows.png) 56px center no-repeat;
+    padding-left:10px;
+    margin:0 20px 0 10px;
+}
+.order_recreation_search .key_inp{
+    width:150px;
+    height:30px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    background:#fff;
+    padding-left:20px;
+
+    margin:0 10px 0 10px;
+}
+.order_recreation_search .order_recreation_btn{
+    width:58px;
+    height:30px;
+    border:none;
+    border-radius:4px;
+    outline:none;
+    background:#2e9df7;
+    cursor:pointer;
+}
+.order_recreation_search .order_recreation_btn:hover{
+    background:#46acff;
+}
+.order_msg{
+    font-size:0;
+    margin-top:10px;
+}
+.order_msg>span{
+    display:inline-block;
+    line-height:40px;
+    text-align:center;
+    background-color:#f5f5f5;
+    font-size:14px;
+    font-weight:bold;
+}
+.order_msg>span:nth-child(1){
+    width:360px;
+}
+.order_msg>span:nth-child(2){
+    width:130px;
+}
+.order_msg>span:nth-child(3){
+    width:130px;
+}
+.order_msg>span:nth-child(4){
+    width:220px;
+}
+.no_order .no_bg{
+    background:url(/ConTent/Img/no_order.png) center center no-repeat;
+    height:160px;
+    margin:100px 0 40px 0;
+}
+.no_order h2{
+    font-size:18px;
+    text-align:center;
+}
+.no_order p{
+    font-size:16px;
+    text-align:center;
+    color:#999;
+    margin-top:10px;
+}
+.list_item{
+    margin-top:10px;
+}
+.list_item .order_number_cont{
+    background-color:#f5f5f5;
+    overflow:hidden;
+    height:40px;
+    line-height:40px;
+    color:#999;
+    padding:0 10px;
+}
+.list_item .chat{
+    color:#2e9df7;
+    margin-left:10px;
+    cursor:pointer;
+}
+.list_item .order_item_msg{
+    border:1px solid #f5f5f5;
+    height:80px;
+    font-size:0;
+}
+.list_item .order_item_msg>div{
+    float:left;
+    font-size:14px;
+    height:78px;
+}
+.list_item .order_item_msg>div:nth-child(1){
+    width:359px;
+    padding-left:9px;
+}
+.list_item .order_item_msg>div:nth-child(1) p{
+   line-height:14px;
+}
+.list_item .order_item_msg>div:nth-child(2){
+    width:128px;
+    border-left:1px solid #f5f5f5;
+    border-right:1px solid #f5f5f5;
+}
+.list_item .order_item_msg>div:nth-child(3){
+    width:129px;
+    border-right:1px solid #f5f5f5;
+}
+.list_item .order_item_msg>div:nth-child(4){
+    width:219px;
+}
+
+.hover:hover {
+    text-decoration: underline;
+}
+.list_item .order_time_cont p{
+    line-height:14px;
+}
+.list_item .order_time_cont .line_type{
+    background-color:#ffc907;
+    font-weight:bold;
+    margin-right:8px;
+}
+.list_item .order_time_cont p:nth-child(1){
+    margin-top:22px;
+}
+.list_item .order_time_cont p:nth-child(2){
+    margin-top:10px;
+    margin-bottom:22px;
+    color:#999;
+}
+.list_item .order_money{
+    line-height:80px;
+    text-align:center;
+}
+.list_item .order_state{
+    line-height:80px;
+    text-align:center;
+}
+.list_item .order_operation{
+    text-align:center;
+}
+.list_item .order_operation.two .order_handle{
+    margin-top:22px;
+    cursor:pointer;
+    line-height:14px;
+}
+.list_item .order_operation.two .order_details{
+    display:inline-block;
+    margin-top:10px;
+    margin-bottom:22px;
+    line-height:14px;
+    color:#262626;
+}
+.list_item .order_operation.one .order_details{
+    line-height:80px;
+    color:#262626;
+}
+.game_result{
+    position:fixed;
+    width:100%;
+    top:200px;
+}
+.game_result_PUBG{
+    margin:0 auto;
+    width:500px;
+    height:320px;
+    background-color:#0d0a00;
+    border-radius:6px;
+    border:1px solid #ffc907;
+}
+.game_result_title{
+    line-height:50px;
+    text-align:center;
+    font-size:18px;
+    color:#ffc907;
+    font-weight:bold;
+    border-bottom:1px solid #ffc907;
+}
+.game_result_PUBG_cont{
+    margin-top:30px;
+}
+.game_result_PUBG_item{
+    font-size:0;
+    width:250px;
+    margin:0 auto 10px auto;
+    position:relative;
+}
+.game_result_PUBG_item>span{
+    font-size:14px;
+    position:absolute;
+    line-height:30px;
+    left:-66px;
+    color:#999;
+}
+.game_result_PUBG_item>select{
+    width:120px;
+    height:30px;
+    border-radius:4px;
+    color:#999;
+    padding-left:10px;
+    appearance:none;
+    -moz-appearance:none;/*?Firefox?*/
+    -webkit-appearance:none;/*?Safari?和?Chrome?*/
+    background:#f5f5f5 url(/Content/Img/user_arrows.png) 96px center no-repeat;
+}
+.game_result_PUBG_item>select+select{
+    margin-left:10px;
+}
+.game_result_PUBG_btn_cont{
+    width:220px;
+    margin:30px auto 0 auto;
+}
+.game_result_PUBG_ok{
+    width:100px;
+    height:30px;
+    border-radius:4px;
+    border:none;
+    background-color:#ffc907;
+    outline:none;
+    cursor:pointer;
+}
+.game_result_PUBG_ok:hover{
+    background-color:#fcd538;
+}
+.game_result_PUBG_cancel{
+    width:100px;
+    height:30px;
+    border-radius:4px;
+    border:none;
+    background-color:#fff;
+    outline:none;
+    color:#999;
+    cursor:pointer;
+    margin-left:20px;
+}
+.game_result_PUBG_cancel:hover{
+    color:#262626;
+}
+.game_result_other{
+    margin:0 auto;
+    width:500px;
+    height:260px;
+    background-color:#0d0a00;
+    border-radius:6px;
+    border:1px solid #ffc907;
+}
+.game_result_other_cont{
+    width:220px;
+    margin:60px auto 0 auto;
+}
+.game_result_other_cont>select{
+    width:220px;
+    height:30px;
+    border-radius:4px;
+    outline:none;
+    padding-left:80px;
+    border-radius:4px;
+    appearance:none;
+    -moz-appearance:none;/*?Firefox?*/
+    -webkit-appearance:none;/*?Safari?和?Chrome?*/
+    background:#f5f5f5 url(/Content/Img/user_arrows.png) 196px center no-repeat;
+}

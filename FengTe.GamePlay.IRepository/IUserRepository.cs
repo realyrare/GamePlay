@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FengTe.GamePlay.IRepository
 {
-  public  interface IUserRepository:IBaseRepository<Users>
+  public  interface IUserRepository:IBaseRepository<User>
     {
 
     }

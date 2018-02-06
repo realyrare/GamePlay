@@ -1,0 +1,238 @@
+﻿.manito_recreation {
+    width:100%;
+    min-height:1013px;
+    border-radius:6px;
+    background-color:#fff;
+    padding:20px;
+}
+.row_title{
+    display:inline-block;
+    width:100px;
+    height:36px;
+    line-height:36px;
+    font-weight:bold;
+    text-align:right;
+}
+.row_cont{
+    margin-top:20px;
+}
+.row_cont.row_img_cont{
+    margin-top:10px;
+}
+.row_cont input[type="file"]{
+    display:none;
+    opacity:0;
+}
+.row_cont button{
+    width:100px;
+    height:36px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    background-color:#f5f5f5;
+    outline:none;
+    cursor:pointer;
+}
+.row_cont select{
+    width:200px;
+    height:36px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    cursor:pointer;
+    appearance:none;
+    -moz-appearance:none;/*?Firefox?*/
+    -webkit-appearance:none;/*?Safari?和?Chrome?*/
+    background:#f5f5f5 url(/Content/Img/user_arrows.png) 176px center no-repeat;
+    padding-left:20px;
+}
+.row_cont select + select{
+    margin-left:10px;
+}
+.row_cont .select{
+    box-sizing:border-box;
+    line-height:36px;
+    display:inline-block;
+    width:200px;
+    height:36px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    cursor:pointer;
+    appearance:none;
+    -moz-appearance:none;/*?Firefox?*/
+    -webkit-appearance:none;/*?Safari?和?Chrome?*/
+    background:#f5f5f5 url(/Content/Img/select.png) 176px center no-repeat;
+    padding-left:20px;
+}
+.row_cont .row_msg{
+    color:#999;
+    margin-left:10px;
+}
+.row_cont .head_cont,.row_cont .grade_cont,.row_cont .label_cont,.row_cont .self_cont,.row_cont .standings_cont{
+    display:inline-block;
+    width:680px;
+    height:80px;
+    border:1px dashed #e5e5e5;
+    border-radius:6px;
+    padding:10px;
+}
+.row_cont .self_cont{
+    padding:9px;
+    font-size:0;
+}
+.row_cont .row_cont_img_txt{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    color:#999;
+    line-height:60px;
+}
+.row_cont .vioce_cont{
+    display:inline-block;
+    width:680px;
+    height:40px;
+    border:1px dashed #e5e5e5;
+    border-radius:6px;
+}
+.row_cont .row_cont_img_txt.row_cont_vioce_txt{
+    line-height:40px;
+}
+.row_cont .service{
+    box-sizing:border-box;
+    width:680px;
+    height:72px;
+    border:1px solid #e5e5e5;
+    border-radius:6px;
+    background-color:#f5f5f5;
+    resize: none;
+    padding:10px;
+}
+.row_cont .service:focus{
+    background-color:#fff;
+    outline:none;
+}
+.service_row_title{
+    vertical-align:top;
+}
+.check_cont{
+    text-align:center;   
+    margin-top:30px;
+}
+.recreation_cont{
+    text-align:center;
+    margin-top:20px;
+}
+.recreation_check_btn{
+    width:200px;
+    height:46px;
+    font-size:18px;
+    border:none;
+    border-radius:4px;
+    background-color:#f0f0f0;
+    cursor:pointer;
+    outline:none;
+}
+.recreation_check_btn:hover{
+    background-color:#fcd538;
+}
+.row_cont .head_cont img,.row_cont .grade_cont img,.row_cont .label_cont img,.row_cont .standings_cont img{
+    height:58px;
+}
+.row_cont .self_cont .self_img + .self_img{
+    margin-left:10px;
+}
+.row_cont .self_cont .self_img{
+    display:inline-block;
+    width:60px;
+    height:60px;
+    position:relative;
+}
+.row_cont .self_cont .self_img img{
+    width:60px;
+    height:60px;
+}
+.row_cont .self_cont .self_img i{
+    background:url(/Content/Img/img_del.png) center center no-repeat;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:-6px;
+    right:-6px;
+    cursor:pointer;
+}
+
+
+.self_label{
+    width:280px;
+    height:36px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    background-color:#f5f5f5;
+    outline:none;
+    margin-left:10px;
+    padding-left:20px;
+}
+.self_label:focus{
+    background-color:#fff;
+}
+.label_txt {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px dashed #e5e5e5;
+    border-radius: 4px;
+    position:relative;
+    margin-right:10px;
+}
+.label_txt>em{
+    background:url(/Content/Img/img_del.png) center center no-repeat;
+    width:20px;
+    height:20px;
+    display:inline-block;
+    position:absolute;
+    right:-10px;
+    top:-10px;
+    cursor:pointer;
+}
+
+
+.manito_recreation_step2_img{
+    width:100%;
+    height:258px;
+}
+.manito_recreation_step2_img.bg_one{
+    background:url(/Content/Img/check.png) center 60px no-repeat;
+}
+.manito_recreation_step2_img.bg_two{
+    background:url(/Content/Img/check_ok.png) center 60px no-repeat;
+}
+.manito_recreation_step2_img.bg_three{
+    background:url(/Content/Img/check_no.png) center 60px no-repeat;
+}
+.manito_recreation_step2_txt{
+    text-align:center;
+}
+.manito_recreation_step2_txt .step2_txt_big{
+    font-size:18px;
+    line-height:34px;
+    font-weight:bold;
+}
+.manito_recreation_step2_txt .step2_txt_small{
+    font-size:16px;
+    line-height:28px;
+    color:#999;
+}
+.manito_recreation_step2_txt .step2_txt_btn{
+    margin-top:54px;
+    width:200px;
+    height:46px;
+    background-color:#ffc907;
+    border-radius:4px;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+    outline:none;
+}
+.manito_recreation_step2_txt .step2_txt_btn:hover{
+    background-color:#fcd538;
+}

@@ -1,0 +1,155 @@
+﻿.manito_top {
+    width:100%;
+    height:1013px;
+    border-radius:6px;
+    background-color:#fff;
+    padding:20px;
+}
+.manito_top_plan{
+    width:680px;
+    margin:0 auto;
+    padding-bottom:20px;
+    border-bottom :1px solid #f5f5f5;
+}
+.manito_top_plan_bg{
+    background:url(/Content/Img/plan1.png) left center no-repeat,url(/Content/Img/plan3.png) center center no-repeat,url(/Content/Img/plan2.png) right center no-repeat;
+    width:366px;
+    height:30px;
+    margin:30px auto 0 auto;
+}
+.manito_top_plan_bg1{
+    background:url(/Content/Img/plan1.png) left center no-repeat,url(/Content/Img/plan3.png) center center no-repeat,url(/Content/Img/plan2_active.png) right center no-repeat;
+}
+.manito_top_plan_txt{
+    width:394px;
+    margin:0 auto;
+    line-height:34px;
+}
+.manito_top_game{
+    width:680px;
+    margin:0 auto;
+    padding-top:20px;
+}
+.choose_game{
+    font-weight:normal;
+    color:#999;
+    line-height:34px;
+}
+.choose_game span{
+    font-weight:bold;
+    color:#262626;
+}
+.choose_game_cont{
+    font-size:0;
+}
+.choose_game_cont select{
+    width:200px;
+    height:36px;
+    outline:none;
+    border-color:#e5e5e5;
+    border-radius:4px;
+    background-color:#f5f5f5;
+    padding-left:20px;
+}
+.choose_game_cont select + select{
+    margin-left:10px;
+}
+.upload_txt{
+    font-weight:bold;
+    line-height:34px;
+    margin-top:20px;
+}
+.upload_btn{
+
+}
+.upload_btn button{
+    width:100px;
+    height:36px;
+    cursor:pointer;
+    border-radius:4px;
+    border:1px solid #e5e5e5;
+    outline:none;
+    background-color:#f5f5f5;
+}
+.upload_btn button:hover{
+    background-color:#fcd538;
+}
+.upload_btn .upload_btn_file{
+    display:none !important;
+    opacity:0;
+}
+.upload_show_img{
+    width:680px;
+    height:260px;
+    border:1px dashed #e5e5e5;
+    border-radius:4px;
+    margin-top:10px;
+}
+.upload_show_img p{
+    line-height:260px;
+    text-align:center;
+    color:#999;
+}
+.upload_show_img img{
+    height:238px;
+    margin:10px;
+}
+.manito_top_agree{
+    text-align:center;
+    margin-top:30px;
+}
+.manito_top_btn{
+    display:block;
+    margin:20px auto 0 auto;
+    width:200px;
+    height:46px;
+    background-color:#f0f0f0;
+    border-radius:4px;
+    line-height:46px;
+    text-align:center;
+    font-size:18px;
+    cursor:pointer;
+}
+.manito_top_btn:hover{
+    background-color:#fcd538 !important;
+}
+.manito_top_step2_img{
+    width:100%;
+    height:258px;
+}
+.manito_top_step2_img.bg_one{
+    background:url(/Content/Img/check.png) center 60px no-repeat;
+}
+.manito_top_step2_img.bg_two{
+    background:url(/Content/Img/check_ok.png) center 60px no-repeat;
+}
+.manito_top_step2_img.bg_three{
+    background:url(/Content/Img/check_no.png) center 60px no-repeat;
+}
+.manito_top_step2_txt{
+    text-align:center;
+}
+.manito_top_step2_txt .step2_txt_big{
+    font-size:18px;
+    line-height:34px;
+    font-weight:bold;
+}
+.manito_top_step2_txt .step2_txt_small{
+    font-size:16px;
+    line-height:28px;
+    color:#999;
+}
+.manito_top_step2_txt .step2_txt_btn{
+    margin-top:54px;
+    width:200px;
+    height:46px;
+    background-color:#ffc907;
+    border-radius:4px;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+    outline:none;
+}
+.manito_top_step2_txt .step2_txt_btn:hover{
+    background-color:#fcd538;
+}

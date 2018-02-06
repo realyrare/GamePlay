@@ -1,0 +1,319 @@
+﻿.manitohome_message {
+    width:100%;
+    background-color:#fff;
+}
+.manitohome_message_container{
+    margin:0 auto;
+    width:1100px;
+    padding-top:80px;
+    position:relative;
+}
+.manitohome_head_cont{
+    width:120px;
+    height:120px;
+    margin:0 auto;
+    position:relative;
+    margin-bottom:10px;
+}
+.manitohome_head_cont .manitohome_head{
+    width:100%;
+    border-radius:100%;
+}
+.manitohome_head_cont .manitohome_head_six{
+    position:absolute;
+    display:block;
+    width:20px;
+    height:20px;
+    bottom:0;
+    right:16px;
+}
+.manitohome_head_cont .manitohome_head_six.man{
+    background:url(/Content/Img/man.png) center center no-repeat;
+}
+.manitohome_head_cont .manitohome_head_six.weman{
+    background:url(/Content/Img/weman.png) center center no-repeat;
+}
+.manitohome_name_cont{
+    line-height:20px;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+}
+.manitohome_name_cont .manitohome_name{
+
+}
+.manitohome_name_cont .manitohome_name_manito.ok{
+    display:inline-block;
+    width:16px;
+    height:15px;
+    background:url(/Content/Img/icon_manito.png) center center no-repeat;
+}
+.manitohome_name_cont .manitohome_name_recreation.ok{
+    display:inline-block;
+    width:16px;
+    height:15px;
+    background:url(/Content/Img/icon_recreation.png) center center no-repeat;
+}
+.manitohome_city,.manitohome_intro{
+    color:#999;
+    text-align:center;
+    line-height:28px;
+}
+.manitohome_intro{
+    margin-top:10px;
+}
+.manitohome_order_btn_cont{
+    text-align:center;
+}
+.manitohome_order_btn{
+    width:140px;
+    height:40px;
+    border-radius:4px;
+    background-color:#ffc907;
+    border:none;
+    cursor:pointer;
+    margin-top:20px;
+    margin-bottom:40px;
+    outline:none;
+}
+.manitohome_order_btn:hover{
+    background-color:#fcd538;
+}
+.manitohome_fans_cont{
+    position:absolute;
+    top:80px;
+    right:0;
+}
+.manitohome_fans_cont .manitohome_fans_attention,.manitohome_fans_cont .manitohome_fans_fans{
+    width:90px;
+    text-align:center;
+}
+.manitohome_fans_cont p{
+    color:#999;
+}
+.manitohome_fans_cont span{
+    font-size:16px;
+    font-weight:bold;
+}
+.manitohome_type{
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.manitohome_type>span{
+    display:inline-block;
+    width:140px;
+    line-height:40px;
+    cursor:pointer;
+}
+.manitohome_type>span.active{
+    border-bottom:4px solid #000;
+}
+.approve_no{
+    width:1100px;
+    height:400px;
+    border-radius:6px;
+    background-color:#fff;
+    margin:0 auto;
+    padding-top:100px;
+}
+.approve_no .nothing_img{
+    width:195px;
+    height:160px;
+    background:url(/Content/Img/no_manito.png) center center no-repeat;
+    margin: 0 auto;
+}
+.approve_no .nothing_text{
+    font-size:18px;
+    font-weight:bold;
+    line-height:62px;
+    text-align:center;
+}
+
+/*游戏介绍框*/
+.manitohome_game_msg{
+    width:1100px;
+    margin:0 auto;
+    border-radius:6px;
+    background-color:#fff;
+    min-height:330px;
+    overflow:hidden;
+    padding:20px 0;
+}
+.manitohome_game_msg .game_msg_cont{
+    width:300px;
+    padding-top:20px;
+}
+.manitohome_game_msg .game_msg_cont .game_msg_img{
+    width:270px;
+    height:140px;
+    margin:0 auto;
+}
+.manitohome_game_msg .game_msg_cont .game_msg_txt{
+    width:240px;
+    margin:0 auto;
+}
+.manitohome_game_msg .game_msg_cont .game_msg_txt>div{
+    width:80px;
+    text-align:center;
+    position:relative;
+}
+.manitohome_game_msg .game_msg_cont .game_msg_txt p{
+    line-height:42px;
+    color:#999;
+}
+.manitohome_game_msg .game_msg_cont .game_msg_txt span){
+    line-height:24px;
+}
+.manitohome_game_msg .game_msg_cont .game_msg_txt .upgrade{
+    position:absolute;
+    display:block;
+    width:49px;
+    height:20px;
+    top:42px;
+    left:-25px;
+    z-index:9999999;
+}
+.manitohome_game_msg .game_msg_cont .game_msg_txt .upgrade.ok{
+    background:url(/Content/Img/upgrade.png) center center no-repeat;
+}
+.manitohome_game_msg .game_msg_cont .game_msg_set{
+    width:120px;
+    height:36px;
+    line-height:36px;
+    text-align:center;
+    border:1px solid #e5e5e5;
+    margin:24px auto 0 auto;
+    cursor:pointer;
+}
+.manitohome_game_msg .right_game_msg{
+    width:800px;
+}
+.manitohome_game_msg .game_msg_cont .game_msg_set:hover{
+    border:none;
+    background-color:#fcd538;
+}
+.manitohome_game_msg .right_game_nopass{
+   height:290px;
+   border-left:1px solid #f0f0f0;
+   margin-top:20px;
+   padding:50px 0 0 20px;
+}
+.manitohome_game_msg .right_game_nopass .game_nopass_item{
+    line-height:24px;
+}
+.manitohome_game_msg .right_game_nopass .game_nopass_item + .game_nopass_item{
+    margin-top:20px;
+}
+.manitohome_game_msg .right_game_nopass .game_nopass_item>span{
+    font-size:12px;
+    color:#999;
+    padding-left:20px;
+}
+.manitohome_game_msg .right_game_nopass .game_nopass_item .circle{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background-color:#cbcbcb;
+    border-radius:100%;
+    margin-right:10px;
+}
+.manitohome_game_msg .right_game_pass{
+   min-height:290px;
+   border-left:1px solid #f0f0f0;
+   padding-left:20px;
+}
+.manitohome_game_msg .right_game_pass .no_message_cont{
+    width:195px;
+    margin:50px auto 0 auto;
+}
+.manitohome_game_msg .right_game_pass .no_message_cont>p{
+    color:#999;
+    line-height:50px;
+    text-align:center;
+}
+.manitohome_game_msg .right_game_pass .right_message_num_cont{
+    font-weight:bold;
+    line-height:30px;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont{
+    margin-top:10px;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item{
+    width:740px;
+    overflow:hidden;
+    border-bottom:1px dashed #f0f0f0;
+    padding-bottom:12px;
+    margin-top:12px;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_head{
+    width:44px;
+    height:44px;
+    border-radius:100%;
+    overflow:hidden;
+    margin-right:10px;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_head img{
+    width:100%;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_message .user_name{
+    font-weight:bold;
+    color:#999;
+    line-height:22px;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_message .user_txt{
+    line-height:22px;
+    width:580px;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_info{
+    font-size:12px;
+    color:#999;
+    line-height:22px;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_grade{
+    color:#999;
+    line-height:22px;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_grade .user_star{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    font-style:normal;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_grade .user_star + .user_star{
+    margin-left:5px;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_grade .user_star.light{
+    background:url(/Content/Img/star_icon_light.png) center center no-repeat;
+}
+.manitohome_game_msg .right_game_pass .right_message_cont .right_message_item .user_grade .user_star.dark{
+    background:url(/Content/Img/star_icon_dark.png) center center no-repeat;
+}
+.manitohome_game_msg .right_game_pass .more_message{
+    text-align:center;
+    color:#999;
+    cursor:pointer;
+    line-height:40px;
+}
+.manitohome_game_msg .right_game_pass .more_message:hover{
+    color:#262626;
+}
+.add_game_approve{
+    height:80px;
+    width:1100px;
+    background-color:#fff;
+    border-radius:6px;
+    margin:20px auto 0 auto;
+    font-size:18px;
+    font-weight:bold;
+    color:#999;
+    text-align:center;
+}
+.add_game_approve span{
+    display:inline-block;
+    line-height:80px;
+    height:80px;
+    background:url(/Content/Img/add_game.png) left center no-repeat ;
+    text-indent:35px;
+    cursor:pointer;
+}

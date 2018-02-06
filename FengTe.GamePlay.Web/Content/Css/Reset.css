@@ -1,0 +1,80 @@
+
+/**
+ * 陪玩
+ * 默认样式
+ */
+html,body,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{
+	color: #262626;
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 14px;
+	font-family:'Microsoft YaHei';
+	background: #f0f0f0;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+li{
+	list-style: none;
+	display: inline-block;
+}
+img{
+	border: 0;
+	vertical-align: middle;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+p{
+	word-wrap: break-word;
+}
+div,input{
+    box-sizing:border-box;
+}
+.wrap{
+	margin:0 auto;
+	position:relative;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+
+/*清浮动*/
+.clearfix:after {  
+    content:"";  
+    display:block;
+    clear:both;
+    height:0;  
+}  
+.clearfix{
+	zoom:1;
+    display: table;
+}
+
+.display{
+    display:none;
+}
+a.hover{
+    color:#2e9df7;
+    font-weight:normal;
+}
+a.hover:hover{
+    text-decoration:underline;
+}
+/*弹框*/
+.screen_alert{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0, .4);
+    z-index: 999;
+}

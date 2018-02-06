@@ -8,3 +8,13 @@ E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\Fe
 E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\FengTe.GamePlay.Utility.pdb
 E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\FengTe.GamePlay.Utility.csprojResolveAssemblyReference.cache
 E:\mhg_NewWebSite\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\log4net.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\FengTe.GamePlay.Utility.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\FengTe.GamePlay.Utility.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\Autofac.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\EmitMapper.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\log4net.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\Autofac.xml
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\EmitMapper.xml
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\FengTe.GamePlay.Utility.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\FengTe.GamePlay.Utility.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\FengTe.GamePlay.Utility.csprojResolveAssemblyReference.cache

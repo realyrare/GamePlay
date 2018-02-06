@@ -16,7 +16,7 @@ namespace FengTe.GamePlay.Utility
         /// <returns></returns>
         public static String GetStreamMd5(Stream stream)
         {
-            string strResult = "";
+          
             string strHashData = "";
             var oMd5Hasher =
                 new System.Security.Cryptography.MD5CryptoServiceProvider();
@@ -25,8 +25,8 @@ namespace FengTe.GamePlay.Utility
             strHashData = System.BitConverter.ToString(arrbytHashValue);
             //替换-
             strHashData = strHashData.Replace("-", "");
-            strResult = strHashData;
-            return strResult;
+            
+            return strHashData;
         }
     }
 }

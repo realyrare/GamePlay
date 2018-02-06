@@ -1,0 +1,339 @@
+html{
+    background-color:#ffc907;
+}
+.logo{
+	margin:70px auto 30px auto;
+    display:block;
+}
+/*µÇÂ¼Ò³Ãæ*/
+.login_container{
+    width:420px;
+    height:480px;
+    background-color:#fff;
+    border-radius:6px;
+    box-shadow:0 0 20px 5px #ffaa07;
+    padding:30px;
+}
+.title{
+    border-bottom:1px solid #f5f5f5;
+    width:100%;
+}
+.title .login_way{
+    float:left;
+    font-size:15px;
+    line-height:54px;
+    border-bottom:2px solid #262626;
+    margin-bottom:-1px;
+}
+.title .login_way_btn_txt{
+    float:right;
+    margin-top:-10px;
+    margin-right:-10px;
+    cursor:pointer;
+}
+.title .login_way_btn_code{
+    float:right;
+    margin-top:-10px;
+    margin-right:-10px;
+    cursor:pointer;
+}
+.text_input{
+    margin-top:20px;
+    width:360px;
+}
+.text_input input.text{
+    width:360px;
+    height:46px;
+    padding-left:20px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    background-color:#f5f5f5;
+    color:#4c4c4c;
+}
+.text_input input.login_code_input{
+    width:230px;
+}
+.text_input input.text:focus{
+    background-color:#fff;
+}
+input::-webkit-input-placeholder{
+    color:#999;
+}
+input::-moz-input-placeholder{
+    color:#999;
+}
+input::-ms-input-placeholder{
+    color:#999;
+}
+.login_code_btn_cont{
+    width:120px;
+    height:46px;
+    margin-left:10px;
+}
+.login_code_btn_cont img{
+    width:100%;
+}
+.login_btn{
+    width:360px;
+    height:46px;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:4px;
+    cursor:pointer;
+    color:#999;
+    display:block;
+    text-align:center;
+    line-height:46px;
+    background-color:#f0f0f0;
+    transition:.5s;
+}
+.login_btn:hover{
+     background-color:#fcd538 !important ;
+     color:#fff !important ;
+}
+.forget_box{
+    width:360px;
+    line-height:54px;
+}
+.forget{
+    color:#2e9df7;
+}
+.forget a{
+    color:#2e9df7;
+}
+.middle{
+    text-align:center;
+    padding:0 5px;
+}
+.other_way{
+    line-height:54px;
+    position:absolute;
+    bottom:0;
+    margin-left:-30px;
+    width:100%;
+    height:54px;
+    padding-left:30px;
+    background-color:#f5f5f5;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+}
+.other_way_qq{
+    display:inline-block;
+    width:30px;
+    height:54px;
+    cursor:pointer;
+    margin:0 16px 0 44px;
+    background:url(/Content/Img/r-qq.png) center center no-repeat;
+}
+.other_way_qq:hover{
+    background:url(/Content/Img/r-qq-active.png) center center no-repeat;
+}
+.other_way_wechat{
+    display:inline-block;
+    width:30px;
+    height:54px;
+    cursor:pointer;
+    background:url(/Content/Img/r-wechat.png) center center no-repeat;
+}
+.other_way_wechat:hover{
+    background:url(/Content/Img/r-wechat-active.png) center center no-repeat;
+}
+.code_container{
+    text-align:center;
+}
+.code_cont{
+    margin-top:41px;
+    width:190px;
+    height:190px;
+}
+.code_cont>img{
+    width:100%;
+}
+.app{
+    line-height:54px;
+}
+.login_txt_a{
+    line-height:54px;
+    margin-top:16px;
+}
+/*×¢²áÒ³Ãæ*/
+.register_cont{
+    width:1000px;
+    height:760px;
+    background-color:#fff;
+    border-radius:6px;
+    box-shadow: 0 0 20px 5px #ffaa07;
+}
+.register_title{
+    line-height:78px;
+    margin:0 30px;
+    width:940px;
+}
+.register_title_txt{
+    font-size:18px;
+    font-weight:bold;
+}
+.register_title_a{
+    color:#999;
+}
+.register_title_a a{
+    color:#2e9df7;
+}
+.table_cont{
+    padding:0 30px;
+}
+.input_register,.input_register_short{
+    height:46px;
+    padding-left:20px;
+    border:1px solid #e5e5e5;
+    border-radius:4px;
+    outline:none;
+    background-color:#f5f5f5;
+    color:#4c4c4c;
+}
+.input_register_short{
+    width:170px;
+}
+.input_register{
+    width:300px;
+}
+.input_register:focus,.input_register_short:focus{
+    background-color:#fff;
+}
+.input_margin{
+    margin-top:20px;
+    width:300px;
+}
+.input_name{
+    font-size:16px;
+    position:absolute;
+    line-height:46px;
+    left:-80px;
+    width:70px;
+    text-align:right;
+}
+.input_msg{
+    position:absolute;
+    line-height:46px;
+    left:310px;
+    top:0;
+}
+.input_msg.ok{
+    background:url(/Content/Img/ok.png) center center no-repeat;
+    width:20px;
+    height:46px;
+}
+.input_msg.err{
+    color:#f43838;
+    width:300px;
+}
+.verification{
+    width:120px;
+    height:46px;
+    margin-left:10px;
+}
+.verification>img{
+    width:100%;
+}
+.get_code{
+    background-color:#e5e5e5;
+    line-height:46px;
+    text-align:center;
+    width:100%;
+    display:inline-block;
+    border-radius:4px;
+    cursor:pointer;
+}
+.register_w{
+    width:300px;
+    line-height:54px;
+}
+.register_w a{
+    color:#2e9df7;
+}
+.register_btn_cont{
+    width:300px;
+}
+.register_btn{
+    display:inline-block;
+    background-color:#f0f0f0;
+    color:#999;
+    font-size:18px;
+    font-weight:bold;
+    width:100%;
+    line-height:46px;
+    text-align:center;
+    border-radius:4px;
+    cursor:pointer;
+    transition:.5s;
+}
+.register_btn:hover{
+     background-color:#fcd538 !important ;
+     color:#fff !important ;
+}
+.register_other_cont{
+    background-color:#f5f5f5;
+    height:60px;
+    width:100%;
+    line-height:60px;
+    position:absolute;
+    bottom:0;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    padding-left:30px;
+}
+.register_qq,.register_wechat{
+    width:30px;
+    height:60px;
+    display:inline-block;
+    cursor:pointer;
+}
+.register_qq{
+    background:url(/Content/Img/r-qq.png) center center no-repeat;
+    margin-left:22px;
+    margin-right:16px;
+}
+.register_qq:hover{
+    background:url(/Content/Img/r-qq-active.png) center center no-repeat;
+}
+.register_wechat{
+    background:url(/Content/Img/r-wechat.png) center center no-repeat;
+}
+.register_wechat:hover{
+    background:url(/Content/Img/r-wechat-active.png) center center no-repeat;
+}
+
+/*µÚÈý·½×¢²á*/
+.other_register_txt{
+    text-align:center;
+    margin-top:20px;
+}
+
+/*ÕÒ»ØÃÜÂë*/
+.forget_cont{
+    height:356px;
+}
+.next_step{
+    display:inline-block;
+    background-color:#ffc907;
+    color:#fff;
+    font-size:18px;
+    font-weight:bold;
+    width:100%;
+    line-height:46px;
+    text-align:center;
+    border-radius:4px;
+    cursor:pointer;
+    margin-top:20px;
+}
+.next_step:hover{
+    background-color:#fcd538;
+}
+.change_pwd_step_msg{
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    margin-top:80px;
+    margin-bottom:10px;
+}

@@ -1,0 +1,150 @@
+﻿.usercenter_cont {
+    width:1100px;
+    margin-top:40px;
+}
+.userinfo_container{
+    width:200px;
+    margin-right:20px;
+    background-color:#fff;
+    border-radius:6px;
+    padding:0 10px;
+}
+.uesr_head{
+    width:100px;
+    height:100px;
+    margin:30px auto 0 auto;
+    border-radius:50%;
+}
+.uesr_head img{
+    width:100%;
+    border-radius:50%;
+}
+.user_name{
+    text-align:center;
+    font-size:16px;
+    line-height:40px;
+}
+.attention_cont{
+    margin-top:3px;
+    padding-bottom:15px;
+    border-bottom:1px solid #ffc907;
+}
+.attention_cont>p{
+    width:180px;
+    line-height:24px;
+}
+.attention_cont>p span:nth-child(2){
+    border-left: 1px solid #f0f0f0;
+    box-sizing: border-box;
+}
+.attention_cont>.small_line{
+    line-height:22px;
+}
+.attention_cont>p>span{
+    display:inline-block;
+    width:90px;
+    text-align:center;
+}
+.user_msg_txt_introduce{
+    font-size:12px;
+    color:#999;
+}
+.user_msg_txt_change{
+    font-size:14px;
+}
+.uesr_msg{
+    padding-top:4px;
+    padding-bottom:40px;
+}
+.user_msg_cont{
+    margin-top:6px;
+}
+.user_msg_cont>p{
+    padding-left:10px;
+    padding-right:6px;
+    margin-left:20px;
+    background-color:#f5f5f5;
+    line-height:20px;
+}
+.user_msg_cont>p:nth-child(2){
+    margin-top:6px;
+}
+.user_msg_cont:nth-child(1){
+    background:url(/Content/Img/user_id.png) left center no-repeat;
+}
+.user_msg_cont:nth-child(2){
+    background:url(/Content/Img/user_vip.png) left center no-repeat;
+}
+.user_msg_cont:nth-child(3){
+    background:url(/Content/Img/user_money.png) left center no-repeat;
+}
+.user_msg_cont:nth-child(4){
+    background:url(/Content/Img/user_ip.png) left center no-repeat;
+}
+.personal_nav{
+    padding-bottom:30px;
+}
+.personal_nav li{
+    width:180px;
+}
+.personal_nav li>span{
+    display:inline-block;
+    width:180px;
+    line-height:40px;
+    padding-left:30px;
+    box-sizing:border-box;
+    cursor:pointer;
+    margin:10px 0;
+    font-size:18px;
+}
+.personal_nav li:nth-child(1)>span{
+    background-image:url(/Content/Img/user_play.png),url(/Content/Img/user_arrows.png);
+    background-repeat: no-repeat, no-repeat;  
+    background-position: 1px center, 162px center;  
+    background-color:#fff9e6;
+}
+.personal_nav li:nth-child(2)>span{
+    background-image:url(/Content/Img/user_wallet.png),url(/Content/Img/user_arrows.png);
+    background-repeat: no-repeat, no-repeat;  
+    background-position: 1px center, 162px center;  
+    background-color:#fff9e6;
+}
+.personal_nav li:nth-child(3)>span{
+    background-image:url(/Content/Img/user_set.png),url(/Content/Img/user_arrows.png);
+    background-repeat: no-repeat, no-repeat;  
+    background-position: 1px center, 162px center;  
+    background-color:#fff9e6;
+}
+.personal_nav li:nth-child(4)>span{
+    background-image:url(/Content/Img/user_message.png),url(/Content/Img/user_arrows.png);
+    background-repeat: no-repeat, no-repeat;  
+    background-position: 1px center, 162px center;  
+    background-color:#fff9e6;
+}
+.personal_nav li dl dd{
+    line-height :28px;
+    cursor:pointer;
+}
+.personal_nav li dl dd:hover{
+
+}
+.personal_nav li dl dd.active{
+    background-color:#ffc907;
+}
+.personal_nav li dl dd span{
+    margin:0 10px;
+}
+.personal_ifm_cont{
+    width:880px;
+    min-height:1100px;
+}
+.personal_ifm{
+    width:100%;
+    min-height:1013px;
+}
+
+.personal_title{
+    line-height:40px;
+    font-size:18px;
+    border-bottom:1px solid #ffc907;
+}

@@ -11,55 +11,64 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
 {
     public class UserRepository : IUserRepository
     {
-        public bool Delete(Users entity)
+        public bool Delete(User entity)
         {
             throw new NotImplementedException();
         }
 
-        public bool DeleteList(IList<Users> list)
+        public bool DeleteList(IList<User> list)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Users> GetList()
+        public IEnumerable<User> GetList()
         {
             using (var conn=ConnectionFactory.Connection())
             {
-                //string sql = @"select * from users ";
-              return  conn.Query<Users>("select *  from users");                
+                //string sql = @"select * from user ";
+              return  conn.Query<User>("select username,password  from user");                
             }
         }
 
-        public Users GetModel(int id)
+        public User GetModel(int id = 1, string where = null)
+        {
+            using (var conn = ConnectionFactory.Connection())
+            {
+                string sql = "select id,UserName,Password,Tel ,State from  [dbo].[User]where UserName=@where or tel=@where";           
+                return conn.Query<User>(sql,new  {UserName=where,Tel=where }).FirstOrDefault();
+            }
+        }
+
+        public IList<User> GetQueryMultiple()
         {
             throw new NotImplementedException();
         }
 
-        public IList<Users> GetQueryMultiple()
+        public int Insert(User entity)
         {
             throw new NotImplementedException();
         }
 
-        public int Insert(Users entity)
+        public int InsertList(IList<User> list)
         {
             throw new NotImplementedException();
         }
 
-        public int InsertList(IList<Users> list)
+        public Tuple<IEnumerable<User>, int> LoadPageEntities(int pageIndex, int PageSize, bool isAsc, QueryParam param = null)
         {
             throw new NotImplementedException();
+        }
+        public bool Update(User entity)
+        {
+            using (var conn = ConnectionFactory.Connection())
+            {
+                string sql = "update user set Last_Login_IP=@Last_Login_IP,Last_Login_Time=@Last_Login_Time where id=@Id";
+               int i= conn.Execute(sql, new { Id = entity.UserId, Last_Login_IP = entity.Last_Login_IP, Last_Login_Time = entity.Last_Login_Time });
+                return i > 0 ? true : false;
+            }
         }
 
-        public Tuple<IEnumerable<Users>, int> LoadPageEntities(int pageIndex, int PageSize, bool isAsc, QueryParam param = null)
-        {
-            throw new NotImplementedException();
-        }
-        public bool Update(Users entity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool UpdateList(IList<Users> list)
+        public bool UpdateList(IList<User> list)
         {
             throw new NotImplementedException();
         }

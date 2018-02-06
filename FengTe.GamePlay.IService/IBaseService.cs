@@ -17,12 +17,8 @@ namespace FengTe.GamePlay.IService
         /// <summary>
         /// 返回单个对象
         /// </summary>
-        T GetModel(int id);
-        /// <summary>
-        /// 查询多个结果集
-        /// </summary>
-        IList<T> GetQueryMultiple();
-
+        T GetModel(int id = 1, string where = null);
+    
         /// <summary>
         /// 分页
         /// </summary>
@@ -36,28 +32,19 @@ namespace FengTe.GamePlay.IService
         /// 删除单条记录
         /// </summary>        
         bool Delete(T entity);
-        /// <summary>
-        /// 批量删除
-        /// </summary>    
-        bool DeleteList(IList<T> list);
+    
         /// <summary>
         /// 新增单条记录
         /// </summary>
 
         int Insert(T entity);
-        /// <summary>
-        /// 批量新增
-        /// </summary>
+  
 
-        int InsertList(IList<T> list);
         /// <summary>
         /// 更新单条记录
         /// </summary>
         bool Update(T entity);
-        /// <summary>
-        /// 批量更新
-        /// </summary>
-        bool UpdateList(IList<T> list);
+   
 
     }
 }
