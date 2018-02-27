@@ -26,48 +26,59 @@ namespace FengTe.GamePlay.Service
 
         public User GetModel(int id = 1, string where = null)
         {
-            return  IocUtils.Resolve<IUserRepository>().GetModel(where: where);
+            return  IocUtils.Resolve<IUserRepository>().GetModel(name: where);
         }     
         public int Insert(User entity)
         {
-            throw new NotImplementedException();
+           return IocUtils.Resolve<IUserRepository>().Insert(entity);
         }
 
+        public bool IsExistUserWhere(string where)
+        {
+           User  userInfo= IocUtils.Resolve<IUserRepository>().GetModel(name: where);
+            if (userInfo != null)
+            {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
         public Tuple<IEnumerable<User>, int> LoadPageEntities(int pageIndex, int PageSize, bool isAsc, QueryParam param = null)
         {
             throw new NotImplementedException();
         }
 
-        public User Login(string str, string password, out string msg)
+        public bool Login(string str, string password, out string msg,out  User  userInfo)
         {         
-          var user= IocUtils.Resolve<IUserRepository>().GetModel(where: str);
-            if (user != null)
+          userInfo= IocUtils.Resolve<IUserRepository>().GetModel(name: str);
+            if (userInfo != null)
             {
-                if (user.State == true)
+                if (userInfo.State == true)
                 {
-                    if (user.Password == password)
+                    if (userInfo.Password == password)
                     {
                         //登录成功了,写其他业务；
-                        user.Last_Login_IP = "";
-                        user.Last_Login_Time = DateTime.Now;
-                        IocUtils.Resolve<IUserRepository>().Update(user);
+                        userInfo.Last_Login_IP = WebHelper.GetLoginIp();
+                        userInfo.Last_Login_Time = DateTime.Now;
+                        IocUtils.Resolve<IUserRepository>().Update(userInfo);
                         msg = "恭喜：登录成功！";
-                        return user;
+                        return true;
                     }
                     else
                     {                   
                         msg = "提示：密码错误！";
-                        return user;
+                        return false;
                     }
                 }
                 else {               
                     msg = "账户被系统锁定,请联系管理员！";
-                    return user;
+                    return false;
                 }
             }
             else {         
                 msg = "账户不存在，请重新输入！";
-                return user;
+                return false;
             }                      
         }
         public bool Update(User entity)

@@ -153,6 +153,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\SystemManage\SystemManageAreaRegistration.cs" />
     <Compile Include="Areas\UserManage\Controllers\LoginController.cs" />
+    <Compile Include="Areas\UserManage\Controllers\RegeisterController.cs" />
     <Compile Include="Areas\UserManage\Controllers\TestController.cs" />
     <Compile Include="Areas\UserManage\UserManageAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
@@ -218,6 +219,13 @@
     <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Js\Login.js" />
+    <Content Include="Content\Js\myExtend.js" />
+    <Content Include="Content\Js\personal_index.js" />
+    <Content Include="Content\Js\Personal_ManitoRecreation.js" />
+    <Content Include="Content\Js\Personal_ManitoTop.js" />
+    <Content Include="Content\Js\Personal_Welcome.js" />
+    <Content Include="Content\Js\UseInfo.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -235,6 +243,7 @@
     <Content Include="Areas\SystemManage\Views\web.config" />
     <Content Include="bin\ApplicationInsights.config" />
     <Content Include="Areas\UserManage\Views\Login\Index.cshtml" />
+    <Content Include="Areas\UserManage\Views\Regeister\Index.cshtml" />
     <None Include="bin\FengTe.GamePlay.Web.dll.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -271,7 +280,6 @@
     <Folder Include="bin\zh-Hans\" />
     <Folder Include="Content\Css\" />
     <Folder Include="Content\Img\" />
-    <Folder Include="Content\Js\" />
     <Folder Include="Content\layui\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />

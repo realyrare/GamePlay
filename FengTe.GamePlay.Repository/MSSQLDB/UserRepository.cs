@@ -30,15 +30,14 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
             }
         }
 
-        public User GetModel(int id = 1, string where = null)
+        public User GetModel(int id = 1, string name = null)
         {
             using (var conn = ConnectionFactory.Connection())
             {
-                string sql = "select id,UserName,Password,Tel ,State from  [dbo].[User]where UserName=@where or tel=@where";           
-                return conn.Query<User>(sql,new  {UserName=where,Tel=where }).FirstOrDefault();
+                string sql = "select  UserId,UserName,Password,Tel ,State from  [dbo].[User]  where UserName=@name or Tel=@name ";           
+                return conn.Query<User>(sql,new  {name=name}).SingleOrDefault();
             }
         }
-
         public IList<User> GetQueryMultiple()
         {
             throw new NotImplementedException();
@@ -46,7 +45,11 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
 
         public int Insert(User entity)
         {
-            throw new NotImplementedException();
+            using (var conn=ConnectionFactory.Connection())
+            {
+                string sql = "	insert  into  [dbo].[User](UserName,Password,Tel,QQ) values(@UserName,@Password,@Tel,@QQ)";
+                return conn.Execute(sql, entity);
+            }                      
         }
 
         public int InsertList(IList<User> list)
@@ -62,7 +65,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
         {
             using (var conn = ConnectionFactory.Connection())
             {
-                string sql = "update user set Last_Login_IP=@Last_Login_IP,Last_Login_Time=@Last_Login_Time where id=@Id";
+                string sql = "update [dbo].[User] set Last_Login_IP=@Last_Login_IP,Last_Login_Time=@Last_Login_Time where UserId=@Id";
                int i= conn.Execute(sql, new { Id = entity.UserId, Last_Login_IP = entity.Last_Login_IP, Last_Login_Time = entity.Last_Login_Time });
                 return i > 0 ? true : false;
             }
@@ -72,5 +75,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
         {
             throw new NotImplementedException();
         }
+
+       
     }
 }

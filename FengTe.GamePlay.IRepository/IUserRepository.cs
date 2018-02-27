@@ -9,6 +9,6 @@ namespace FengTe.GamePlay.IRepository
 {
   public  interface IUserRepository:IBaseRepository<User>
     {
-
+     
     }
 }

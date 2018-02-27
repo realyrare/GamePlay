@@ -22,7 +22,7 @@ namespace FengTe.GamePlay.IRepository
         /// <summary>
         /// 返回单个对象
         /// </summary>
-        T GetModel(int id=1,string where=null);
+        T GetModel(int id=1,string name=null);
         /// <summary>
         /// 查询多个结果集
         /// </summary>

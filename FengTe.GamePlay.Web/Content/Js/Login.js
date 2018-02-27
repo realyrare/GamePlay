@@ -49,11 +49,10 @@
         }
         $.ajax({
             type: "Post",
-            url: '',
-            data: { uname: uname.val().trim() },
-            dataType: "json",
+            url: '/UserManage/Regeister/IsUserWhere',
+            data: { where: uname.val().trim() },         
             success: function (data) {
-                if (data.d) {
+                if (data == "exist") {
                     uname.parent("div").find(".input_msg").removeClass("ok").addClass("err").html("该用户名已存在");
                     delete register.name;
                     doregister();
@@ -149,11 +148,11 @@
         }
         $.ajax({
             type: "Post",
-            url: '',
-            data: { phone: phone.val().trim() },
-            dataType: "json",
+            url: '/UserManage/Regeister/IsUserWhere',
+            data: { where: phone.val().trim() },
+          
             success: function (data) {
-                if (data.d) {
+                if (data=="exist") {
                     phone.parent("div").find(".input_msg").removeClass("ok").addClass("err").html("该手机号已经被注册");
                     delete register.phone;
                     doregister();

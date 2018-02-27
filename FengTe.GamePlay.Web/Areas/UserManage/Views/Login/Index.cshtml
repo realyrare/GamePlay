@@ -2,7 +2,6 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +16,7 @@
 </head>
 <body>
     <div class="wrap">
-        <img class="logo" src="/Content/Img/logo.png" alt="logo" />
+        <img class="logo" src="/Content/Img/logo.png" alt="logo"/>
     </div>
     <div class="wrap login_container">
         <div class="login_txt">
@@ -34,9 +33,9 @@
                 <input class="text password" id="password" type="password" name="password" placeholder="密码" />
             </div>
             <div class="text_input">
-                <input class="text login_code_input" id="login_code_input" type="text" name="login_code_input" placeholder="验证码" />
+                <input class="text login_code_input" id="code" type="text" name="code" placeholder="验证码" />
                 <div class="login_code_btn_cont fr">
-                    <img src="#" alt="验证码" />
+                    <img id="vCodeImg" src="/UserManage/Login/VCode?id=1" alt="验证码"  onclick="changeSrcCode();"/>
                 </div>
             </div>
             <div class="text_input">
@@ -75,3 +74,15 @@
 </html>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Content/Js/Login.js"></script>
+<script src="~/Content/Js/myExtend.js"></script>
+<script type="text/javascript">
+    //点击验证码变换事件
+    function changeSrcCode() {
+        $("#vCodeImg").attr("src", $("#vCodeImg").attr("src") + 1);// 取得img属性 得到src地址给它+1 是为了每次变换验证码
+    }
+        $('.login_btn').click(function () {
+            $.post('/UserManage/Login/UserLogin', { str: $('#name').val(), pwd: $('#password').val(), vcode: $('#code').val() }, function (data) {
+                $.Myalert(data);
+            });
+        });   
+</script>

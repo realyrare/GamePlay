@@ -33,25 +33,19 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
             if (string.IsNullOrEmpty(vcode)||session!= vcode.ToString())
             {
                 return Content("提示：验证码错误！");
-            }
-            string msg = string.Empty;        
-            User user = IocUtils.Resolve<IUserService>().Login(str, pwd,out  msg);
-            if (user != null)
+            }          
+            string msg = string.Empty;
+            User userInfo = null;
+            if (IocUtils.Resolve<IUserService>().Login(str, pwd, out msg,out userInfo))
             {
-                if (msg == "恭喜：登录成功！")
+                Session["current_user"] = userInfo;
+                if (!string.IsNullOrEmpty(isCheck))
                 {
-                    Session["current_user"] = user;
-                    if (!string.IsNullOrEmpty(isCheck))
-                    {
-                        CookieHelper.SetCookie("sb1", user.UserName, DateTime.Now.AddDays(7));
-                        CookieHelper.SetCookie("sb2", user.Password, DateTime.Now.AddDays(7));
-                    }
-                    return Content(msg);
+                    CookieHelper.SetCookie("sb1", userInfo.UserName, DateTime.Now.AddDays(7));
+                    CookieHelper.SetCookie("sb2", userInfo.Password, DateTime.Now.AddDays(7));
                 }
-                else {
-                    return Content(msg);
-                }
-            }
+                return Content(msg);
+            }                         
             else {
                 return Content(msg);
             }
