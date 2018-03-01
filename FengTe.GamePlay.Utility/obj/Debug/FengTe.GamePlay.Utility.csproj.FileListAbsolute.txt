@@ -17,4 +17,4 @@ E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\EmitMapper.xml
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\FengTe.GamePlay.Utility.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\FengTe.GamePlay.Utility.pdb
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\FengTe.GamePlay.Utility.csprojResolveAssemblyReference.cache
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\TopSdk.dll

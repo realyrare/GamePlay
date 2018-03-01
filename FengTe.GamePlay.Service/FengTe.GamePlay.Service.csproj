@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserService.cs" />
+    <Compile Include="VCodeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FengTe.GamePlay.Entity\FengTe.GamePlay.Entity.csproj">

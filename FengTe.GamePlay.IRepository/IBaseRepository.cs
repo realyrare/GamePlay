@@ -23,10 +23,7 @@ namespace FengTe.GamePlay.IRepository
         /// 返回单个对象
         /// </summary>
         T GetModel(int id=1,string name=null);
-        /// <summary>
-        /// 查询多个结果集
-        /// </summary>
-        IList<T> GetQueryMultiple();
+       
         /// <summary>
         /// 分页
         /// </summary>
@@ -40,29 +37,28 @@ namespace FengTe.GamePlay.IRepository
         /// 删除单条记录
         /// </summary>        
         bool Delete(T entity);
-        /// <summary>
-        /// 批量删除
-        /// </summary>    
-        bool DeleteList(IList<T> list);   
+       
+     
         /// <summary>
         /// 新增单条记录
         /// </summary>
 
         int Insert(T entity);
-        /// <summary>
-        /// 批量新增
-        /// </summary>
-       
-        int InsertList(IList<T> list);
+      
         /// <summary>
         /// 更新单条记录
         /// </summary>
         bool Update(T entity);
+
+        //bool UpdateList(IList<T> list);
+
+        //int InsertList(IList<T> list);
+        // bool DeleteList(IList<T> list);
         /// <summary>
-        /// 批量更新
+        /// 查询多个结果集
         /// </summary>
-        bool UpdateList(IList<T> list);
-       
+        //IList<T> GetQueryMultiple();
+
 
     }
 }

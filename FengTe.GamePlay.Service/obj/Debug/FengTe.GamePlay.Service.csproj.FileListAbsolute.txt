@@ -34,3 +34,4 @@ E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\obj\Debug\FengTe.GamePlay.Service.csprojResolveAssemblyReference.cache
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\obj\Debug\FengTe.GamePlay.Service.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\obj\Debug\FengTe.GamePlay.Service.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\TopSdk.dll

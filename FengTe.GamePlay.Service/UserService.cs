@@ -62,25 +62,31 @@ namespace FengTe.GamePlay.Service
                         userInfo.Last_Login_IP = WebHelper.GetLoginIp();
                         userInfo.Last_Login_Time = DateTime.Now;
                         IocUtils.Resolve<IUserRepository>().Update(userInfo);
-                        msg = "恭喜：登录成功！";
+                        msg = "ok,恭喜：登录成功！";
                         return true;
                     }
                     else
                     {                   
-                        msg = "提示：密码错误！";
+                        msg = "no,提示：密码错误！";
                         return false;
                     }
                 }
                 else {               
-                    msg = "账户被系统锁定,请联系管理员！";
+                    msg = "no,账户被系统锁定,请联系管理员！";
                     return false;
                 }
             }
             else {         
-                msg = "账户不存在，请重新输入！";
+                msg = "no,账户不存在，请重新输入！";
                 return false;
             }                      
         }
+
+        public string OutCode(string mobile, string vcode, string ip)
+        {
+          return  IocUtils.Resolve<IUserRepository>().OutCode(mobile, vcode, ip);
+        }
+
         public bool Update(User entity)
         {
            return IocUtils.Resolve<IUserRepository>().Update(entity);

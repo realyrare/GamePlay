@@ -18,5 +18,13 @@ namespace FengTe.GamePlay.IService
         /// <param name="where"></param>
         /// <returns></returns>
         bool IsExistUserWhere(string where);
+        /// <summary>
+        /// 发送验证码
+        /// </summary>
+        /// <param name="mobile"></param>
+        /// <param name="vcode"></param>
+        /// <param name="ip"></param>
+        /// <returns></returns>
+        string OutCode(string mobile, string vcode, string ip);
     }
 }

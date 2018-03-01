@@ -21,28 +21,83 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
         {
             return View();
         }
-        public ActionResult UserReg()
+        #region 用户注册
+        public ActionResult UserReg(string uname, string phone, string pwd, string qq)
         {
-            User user = new User() { };
-           int i= IocUtils.Resolve<IUserService>().Insert(user);
+            User user = new User()
+            {
+                UserName = uname,
+                Tel = phone,
+                Password = pwd,
+                QQ = int.Parse(qq.ToString())
+            };
+            int i = IocUtils.Resolve<IUserService>().Insert(user);
             if (i > 0)
             {
-                return Content("恭喜：注册成功！");
+                return Content("ok,恭喜：注册成功！");
             }
-            else {
-                return Content("提示：注册失败！");
+            else
+            {
+                return Content("no,提示：注册失败！");
             }
-        }
+        } 
+        #endregion
+        #region 校验手机号，用户名是否已存在
         public ActionResult IsUserWhere(string where)
         {
             if (IocUtils.Resolve<IUserService>().IsExistUserWhere(where))
             {
                 return Content("exist");
             }
-            else {
+            else
+            {
                 return Content("noExist");
+            }
+        } 
+        #endregion
+        #region 用户注册验证码发送
+        public ActionResult SendVcode(string phone, string vcode)
+        {
+            var validatecode = Session["user_vcode"].ToString() == null ? "" : Session["user_vcode"].ToString();
+            if (string.IsNullOrEmpty(vcode))
+            {
+                return Content("提示：验证码错误！");
+            }
+            if (!validatecode.Equals(vcode, StringComparison.CurrentCultureIgnoreCase))
+            {
+                return Content("提示：验证码错误！");
+            }
+            if (phone.Length != 11 && phone.ToString() == null)
+            {
+                return Content("提示：手机号码不正确");
+            }
+            Random r = new Random();
+            string code2 = r.Next(100000, 999999).ToString();
+            string ip = WebHelper.GetLoginIp();
+            string outCode = IocUtils.Resolve<IUserService>().OutCode(phone, code2, ip);
+            if (outCode != null)
+            {
+                string msg = VCode.SendVCode(phone, outCode);
+                return Content(msg);
+            }
+            else
+            {
+                return Content("您的验证码短信仍在30分钟有效期内");
+            }
+        }
+        #endregion
+        #region 校验验证码是否匹配
+        public ActionResult CheckMobileCode(string mobile, string code)
+        {
+            if (IocUtils.Resolve<IVCodeService>().CheckMobileCode(mobile, code))
+            {
+                return Content("ok");
+            }
+            else {
+                return Content("no");
             }            
         }
+        #endregion
         /// <summary>
         /// 第三方注册
         /// </summary>

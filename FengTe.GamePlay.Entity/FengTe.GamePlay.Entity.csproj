@@ -60,6 +60,7 @@
     <Compile Include="R_ManageUser_Action.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserMessage.cs" />
+    <Compile Include="VerificationCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModel\" />

@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using FengTe.GamePlay.Entity.Params;
 using Dapper;
+using System.Data;
+
 namespace FengTe.GamePlay.Repository.MSSQLDB
 {
     public class UserRepository : IUserRepository
@@ -16,10 +18,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
             throw new NotImplementedException();
         }
 
-        public bool DeleteList(IList<User> list)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         public IEnumerable<User> GetList()
         {
@@ -38,10 +37,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
                 return conn.Query<User>(sql,new  {name=name}).SingleOrDefault();
             }
         }
-        public IList<User> GetQueryMultiple()
-        {
-            throw new NotImplementedException();
-        }
+      
 
         public int Insert(User entity)
         {
@@ -51,16 +47,27 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
                 return conn.Execute(sql, entity);
             }                      
         }
-
-        public int InsertList(IList<User> list)
-        {
-            throw new NotImplementedException();
-        }
-
+    
         public Tuple<IEnumerable<User>, int> LoadPageEntities(int pageIndex, int PageSize, bool isAsc, QueryParam param = null)
         {
             throw new NotImplementedException();
         }
+
+        public string OutCode(string mobile, string vcode, string ip)
+        {
+            DynamicParameters dp = new DynamicParameters();
+            dp.Add("@mobile", mobile);
+            dp.Add("@code", vcode);
+            dp.Add("@ip", ip);
+            dp.Add("@outCode", "", DbType.String, ParameterDirection.Output);
+            using (var conn=ConnectionFactory.Connection())
+            {
+                conn.Execute("SendVCode", dp, null, null, CommandType.StoredProcedure);
+                string outCode = dp.Get<string>("@outCode");
+                return outCode;
+            }
+        }
+
         public bool Update(User entity)
         {
             using (var conn = ConnectionFactory.Connection())
@@ -71,11 +78,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
             }
         }
 
-        public bool UpdateList(IList<User> list)
-        {
-            throw new NotImplementedException();
-        }
-
+      
        
     }
 }

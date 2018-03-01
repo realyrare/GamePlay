@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="IUserRepository.cs" />
+    <Compile Include="IVCodeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
