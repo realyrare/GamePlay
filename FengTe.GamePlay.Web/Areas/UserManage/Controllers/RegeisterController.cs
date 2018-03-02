@@ -22,14 +22,14 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
             return View();
         }
         #region 用户注册
-        public ActionResult UserReg(string uname, string phone, string pwd, string qq)
+        public ActionResult UserReg(string uname, string phone, string pwd, int qq)
         {
             User user = new User()
             {
                 UserName = uname,
                 Tel = phone,
-                Password = pwd,
-                QQ = int.Parse(qq.ToString())
+                Password =DESEncrypt.Encrypt(pwd),
+                QQ = qq
             };
             int i = IocUtils.Resolve<IUserService>().Insert(user);
             if (i > 0)
@@ -73,7 +73,7 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
             }
             Random r = new Random();
             string code2 = r.Next(100000, 999999).ToString();
-            string ip = WebHelper.GetLoginIp();
+            string ip = Net.Ip;
             string outCode = IocUtils.Resolve<IUserService>().OutCode(phone, code2, ip);
             if (outCode != null)
             {

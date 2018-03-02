@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionFactory.cs" />
+    <Compile Include="MSSQLDB\LogRepository.cs" />
     <Compile Include="MSSQLDB\UserRepository.cs" />
     <Compile Include="MSSQLDB\VCodeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

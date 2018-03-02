@@ -262,6 +262,7 @@
     <Content Include="Areas\UserManage\Views\Login\Index.cshtml" />
     <Content Include="Areas\UserManage\Views\Regeister\Index.cshtml" />
     <None Include="bin\FengTe.GamePlay.Web.dll.config" />
+    <Content Include="Config\System.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -288,6 +289,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_Start\Filter\" />
     <Folder Include="Areas\SystemManage\Controllers\" />
     <Folder Include="Areas\SystemManage\Models\" />
     <Folder Include="Areas\SystemManage\Views\Shared\" />
@@ -305,6 +307,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FengTe.GamePlay.Code\FengTe.GamePlay.Code.csproj">
+      <Project>{444C0B85-9993-465D-8B6B-DC21A799A71C}</Project>
+      <Name>FengTe.GamePlay.Code</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FengTe.GamePlay.Entity\FengTe.GamePlay.Entity.csproj">
       <Project>{9a68bfcb-367e-4466-9d83-069309176817}</Project>
       <Name>FengTe.GamePlay.Entity</Name>

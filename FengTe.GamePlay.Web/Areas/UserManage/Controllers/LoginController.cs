@@ -1,4 +1,5 @@
-﻿using FengTe.GamePlay.Entity;
+﻿using FengTe.GamePlay.Code;
+using FengTe.GamePlay.Entity;
 using FengTe.GamePlay.Entity.Enum;
 using FengTe.GamePlay.IService;
 using FengTe.GamePlay.Utility;
@@ -36,20 +37,51 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
             }          
             string msg = string.Empty;
             User userInfo = null;
+            Log log = new Log();
             if (IocUtils.Resolve<IUserService>().Login(str, pwd, out msg,out userInfo))
             {
-                Session["current_user"] = userInfo;
+                //添加当前用户
+                FrontCurrentUser currentUser = new FrontCurrentUser()
+                {
+                    UserId=userInfo.UserId,
+                    UserAccount=userInfo.UserName,
+                    UserPwd=userInfo.Password,
+                   Last_Login_IP=userInfo.Last_Login_IP,
+                   Last_Login_Time=userInfo.Last_Login_Time,
+                   LoginToken=DESEncrypt.Decrypt(Guid.NewGuid().ToString())
+                };
+                OperatorProvider<FrontCurrentUser> provider = new OperatorProvider<FrontCurrentUser>();
+                provider.AddCurrent(currentUser);
+                //写日志
+                log.Title = userInfo.UserName;
+                log.Msg = "登录成功";               
+                IocUtils.Resolve<ILogService>().Insert(log);
+                // Session["current_user"] = userInfo;
                 if (!string.IsNullOrEmpty(isCheck))
                 {
                     CookieHelper.SetCookie("sb1", userInfo.UserName, DateTime.Now.AddDays(7));
-                    CookieHelper.SetCookie("sb2", userInfo.Password, DateTime.Now.AddDays(7));
+                    CookieHelper.SetCookie("sb2", DESEncrypt.Decrypt(userInfo.Password), DateTime.Now.AddDays(7));
                 }
                 return Content(msg);
             }                         
             else {
+                log.Title = userInfo.UserName;
+                log.Msg = "登录失败"+msg;
+                IocUtils.Resolve<ILogService>().Insert(log);
                 return Content(msg);
-            }
-           
+            }          
+        }
+        [HttpGet]
+        public ActionResult OutLogin()
+        {          
+            Log log = new Log() {
+                Title= new OperatorProvider<FrontCurrentUser>().GetCurrent().UserAccount,
+                Msg = "安全退出系统"
+            };          
+            Session.Abandon();
+            Session.Clear();
+            new OperatorProvider<FrontCurrentUser>().RemoveCurrent();
+            return RedirectToAction("Index", "Login");
         }
         /// <summary>
         /// 验证码生成

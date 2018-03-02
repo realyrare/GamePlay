@@ -5,10 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Web.WebPages;
+
 namespace FengTe.GamePlay.Utility
 {
    public class WebHelper
     {
+        #region 计算文件的MD5值
         /// <summary>
         /// 计算文件的MD5值
         /// </summary>
@@ -16,7 +19,7 @@ namespace FengTe.GamePlay.Utility
         /// <returns></returns>
         public static String GetStreamMd5(Stream stream)
         {
-          
+
             string strHashData = "";
             var oMd5Hasher =
                 new System.Security.Cryptography.MD5CryptoServiceProvider();
@@ -25,9 +28,11 @@ namespace FengTe.GamePlay.Utility
             strHashData = System.BitConverter.ToString(arrbytHashValue);
             //替换-
             strHashData = strHashData.Replace("-", "");
-            
+
             return strHashData;
-        }
+        } 
+        #endregion
+        #region 获取远程访问用户的Ip地址  
         /// <summary>  
         /// 获取远程访问用户的Ip地址  
         /// </summary>  
@@ -36,7 +41,7 @@ namespace FengTe.GamePlay.Utility
         {
             string loginip = "";
             //Request.ServerVariables[""]--获取服务变量集合 
-          
+
             if (HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"] != null) //判断发出请求的远程主机的ip地址是否为空  
             {
                 //获取发出请求的远程主机的Ip地址  
@@ -62,6 +67,53 @@ namespace FengTe.GamePlay.Utility
                 loginip = HttpContext.Current.Request.UserHostAddress;
             }
             return loginip;
+        } 
+        #endregion
+        #region Session操作
+        /// <summary>
+        /// 写Session
+        /// </summary>
+        /// <typeparam name="T">Session键值的类型</typeparam>
+        /// <param name="key">Session的键名</param>
+        /// <param name="value">Session的键值</param>
+        public static void WriteSession<T>(string key, T value)
+        {
+            if (key.IsEmpty())
+                return;
+            HttpContext.Current.Session[key] = value;
         }
+
+        /// <summary>
+        /// 写Session
+        /// </summary>
+        /// <param name="key">Session的键名</param>
+        /// <param name="value">Session的键值</param>
+        public static void WriteSession(string key, string value)
+        {
+            WriteSession<string>(key, value);
+        }
+
+        /// <summary>
+        /// 读取Session的值
+        /// </summary>
+        /// <param name="key">Session的键名</param>        
+        public static string GetSession(string key)
+        {
+            if (key.IsEmpty())
+                return string.Empty;
+            return HttpContext.Current.Session[key] as string;
+        }
+        /// <summary>
+        /// 删除指定Session
+        /// </summary>
+        /// <param name="key">Session的键名</param>
+        public static void RemoveSession(string key)
+        {
+            if (key.IsEmpty())
+                return;
+            HttpContext.Current.Session.Contents.Remove(key);
+        }
+
+        #endregion
     }
 }

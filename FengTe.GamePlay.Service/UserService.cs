@@ -56,11 +56,11 @@ namespace FengTe.GamePlay.Service
             {
                 if (userInfo.State == true)
                 {
-                    if (userInfo.Password == password)
+                    if (userInfo.Password == DESEncrypt.Encrypt(password))
                     {
                         //登录成功了,写其他业务；
-                        userInfo.Last_Login_IP = WebHelper.GetLoginIp();
-                        userInfo.Last_Login_Time = DateTime.Now;
+                        userInfo.Last_Login_IP = Net.Ip;
+                        userInfo.Last_Login_Time = DateTime.Now;                      
                         IocUtils.Resolve<IUserRepository>().Update(userInfo);
                         msg = "ok,恭喜：登录成功！";
                         return true;

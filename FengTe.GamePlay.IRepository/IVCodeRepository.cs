@@ -10,7 +10,7 @@ namespace FengTe.GamePlay.IRepository
    public interface IVCodeRepository: IBaseRepository<VerificationCode>
     {
         /// <summary>
-        /// 验证码与库中手机号，验证码是否匹配+
+        /// 验证码与库中手机号，验证码是否匹配
         /// </summary>
         /// <param name="mobile"></param>
         /// <param name="code"></param>

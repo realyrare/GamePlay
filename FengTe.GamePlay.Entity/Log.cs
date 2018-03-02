@@ -15,6 +15,7 @@ namespace FengTe.GamePlay.Entity
         /// 自身Id
         /// </summary>
         public int LogId { get; set; }
+        public string  Title { get; set; }
         /// <summary>
         /// 系统当前时间
         /// </summary>

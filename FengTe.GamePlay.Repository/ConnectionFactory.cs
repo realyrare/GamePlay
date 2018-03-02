@@ -11,7 +11,7 @@ namespace FengTe.GamePlay.Repository
   public  class ConnectionFactory
     {
         private static readonly string ConnString = ConfigurationManager.ConnectionStrings["MSSQL_GamePlayDB"].ConnectionString;
-        //private static readonly string mySqlConnString = ConfigurationManager.ConnectionStrings["mySqlConn"].ConnectionString;
+     
         private static readonly string ConnStringType = ConfigurationManager.AppSettings["ConnMsSql"];
 
         #region 单例模式

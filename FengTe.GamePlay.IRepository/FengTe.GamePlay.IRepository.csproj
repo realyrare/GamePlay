@@ -43,6 +43,7 @@
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="IVCodeRepository.cs" />
+    <Compile Include="LogRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
