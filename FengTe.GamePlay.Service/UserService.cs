@@ -56,7 +56,7 @@ namespace FengTe.GamePlay.Service
             {
                 if (userInfo.State == true)
                 {
-                    if (userInfo.Password == DESEncrypt.Encrypt(password))
+                    if (DESEncrypt.Encrypt(password).Equals(userInfo.Password))
                     {
                         //登录成功了,写其他业务；
                         userInfo.Last_Login_IP = Net.Ip;

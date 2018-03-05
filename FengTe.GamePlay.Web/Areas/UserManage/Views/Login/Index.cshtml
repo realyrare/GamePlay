@@ -82,7 +82,16 @@
     }
         $('.login_btn').click(function () {
             $.post('/UserManage/Login/UserLogin', { str: $('#name').val(), pwd: $('#password').val(), vcode: $('#code').val() }, function (data) {
-                $.Myalert(data);
+                var msgData = data.split(',');
+                if (msgData[0] == 'ok') {
+                    $.Myalert(msgData[1]);
+                    setTimeout(function () {
+                        window.location.href = '/UserManage/User/Index';
+                    }, 1500);
+                } else {
+                    $.Myalert(msgData[1]);
+                }
+               
             });
         });   
 </script>

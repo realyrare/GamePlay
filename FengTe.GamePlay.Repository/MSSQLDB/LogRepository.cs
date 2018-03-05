@@ -29,7 +29,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
 
         public int Insert(Log entity)
         {
-            string sql = "insert  into log(Title,Msg)values(@Title,@Msg)";
+            string sql = "insert  into log(Title,Msg,IP)values(@Title,@Msg,@IP)";
             using (var conn =ConnectionFactory.Connection())
             {
                 return conn.Execute(sql, entity);

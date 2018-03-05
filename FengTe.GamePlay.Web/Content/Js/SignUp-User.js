@@ -239,7 +239,7 @@
                             if (msg[0] == 'ok') {
                               //  $.Myalert(msg[1]);
                                 setTimeout(function () {
-                                    window.location.href = 'https://www.baidu.com';
+                                    window.location.href = '/UserManage/User/Index';
                                 }, 1200);
 
                             } else if (msg[0] == 'no') {

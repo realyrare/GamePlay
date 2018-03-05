@@ -33,7 +33,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
         {
             using (var conn = ConnectionFactory.Connection())
             {
-                string sql = "select  UserId,UserName,Password,Tel ,State,city,Last_Login_Time,Last_Login_IP from  [dbo].[User]  where UserName=@name or Tel=@name ";           
+                string sql = "select  UserId,UserName,Password,Tel ,State,CurrentCity,Last_Login_Time,Last_Login_IP from  [dbo].[User]  where UserName=@name or Tel=@name ";           
                 return conn.Query<User>(sql,new  {name=name}).SingleOrDefault();
             }
         }

@@ -1,0 +1,114 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@using FengTe.GamePlay.Code
+@model FengTe.GamePlay.Code.FrontCurrentUser
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>个人中心</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="~/Content/Css/Reset.css" rel="stylesheet" />
+    <link href="~/Content/Css/Personal_index.css" rel="stylesheet" />
+    <link href="~/Content/Img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+</head>
+<body>
+    @*@Html.Action("UserTop", "PersonalUser")*@
+    @Html.Partial("_nav")
+    <div class="wrap usercenter_cont"> 
+        <div class="userinfo_container fl">
+            <div class="uesr_head">
+                <img src="/Content/Img/use_img.jpg" alt="头像"/>
+            </div>
+            <p class="user_name">@Model.UserAccount</p>
+            <div class="attention_cont">
+                <p class="small_line">
+                    <span class="user_msg_txt_introduce">关注</span><span class="user_msg_txt_introduce">粉丝</span>
+                </p>
+                <p>
+                    <span class="user_msg_txt_change">1000</span><span class="user_msg_txt_change">20</span>
+                </p>
+            </div>
+            <div class="uesr_msg">
+                <div class="user_msg_cont">
+                    <p class="user_msg_cont_txt">
+                        <span class="user_msg_txt_change user_id">@Model.UserId</span>
+                    </p>
+                </div>
+                <div class="user_msg_cont">
+                    <p class="user_msg_cont_txt">
+                        <span class="user_msg_txt_change user_vip">V0</span>
+                        <a class="hover fr" href="#">VIP等级说明</a>
+                    </p>
+                </div>
+                <div class="user_msg_cont">
+                    <p class="user_msg_cont_txt">
+                        <span class="user_msg_txt_introduce">可用：</span>
+                        <span class="user_msg_txt_change user_usable_money">@ViewBag.UsableMoney</span>
+                        <a class="hover fr" href="#">充值</a>
+                    </p>
+                    <p class="user_msg_cont_txt">
+                        <span class="user_msg_txt_introduce">冻结：</span>
+                        <span class="user_msg_txt_change user_no_money">@ViewBag.FreezeMoney</span>
+                    </p>
+                </div>
+                <div class="user_msg_cont">
+                    <p class="user_msg_cont_txt">
+                        <span class="user_msg_txt_introduce">IP：</span>
+                        <span class="user_msg_txt_introduce user_ip">@Model.Last_Login_IP</span>
+                    </p>
+                    <p class="user_msg_cont_txt">
+                        <span class="user_msg_txt_introduce">时：</span>
+                        <span class="user_msg_txt_introduce user_time">@Model.Last_Login_Time.ToString("yyyy-MM-dd HH:mm")</span>
+                    </p>
+                </div>
+            </div>
+            <div class="personal_nav">
+                <ul>
+                    <li>
+                        <span>我的陪玩</span>
+                        <dl>
+                            <dd><span>—</span><a class="personal_nav_apply" href="/Personal/ManitoApply" target="personal_ifm"><span>大神申请</span></a></dd>
+                            <dd><span>—</span><a href="/Personal/ManitoHomepage" target="_blank"><span>大神主页</span></a></dd>
+                            <dd><span>—</span><a href="/Personal/OrderReceivRecord" target="personal_ifm"><span>接单记录</span></a></dd>
+                            <dd><span>—</span><a href="/Personal/OrderPlaceRecord" target="personal_ifm"><span>下单记录</span></a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <span>我的钱包</span>
+                        <dl>
+                            <dd><span>—</span><a href="#" target="personal_ifm"><span>充值</span></a></dd>
+                            <dd><span>—</span><a href="#" target="personal_ifm"><span>提现</span></a></dd>
+                            <dd><span>—</span><a href="#" target="personal_ifm"><span>明细</span></a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <span>账号设置</span>
+                        <dl>
+                            <dd><span>—</span><a href="#" target="personal_ifm"><span>个人资料</span></a></dd>
+                            <dd><span>—</span><a href="#" target="personal_ifm"><span>安全设置</span></a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <span>消息中心</span>
+                        <dl>
+                            <dd><span>—</span><a href="#" target="personal_ifm"><span>我的消息</span></a></dd>
+                            <dd><span>—</span><a href="#" target="personal_ifm"><span>我的评价</span></a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="personal_ifm_cont fl">
+            <iframe class="personal_ifm" name="personal_ifm" src="/UserManage/User/Welcome" scrolling="no" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Content/Js/personal_index.js"></script>

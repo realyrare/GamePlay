@@ -103,6 +103,7 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
         /// </summary>
         /// <returns></returns>
         public ActionResult RegisterOther()
+
         {
             return View();
         }

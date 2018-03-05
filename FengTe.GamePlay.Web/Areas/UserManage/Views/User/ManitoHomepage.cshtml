@@ -1,0 +1,389 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>个人中心</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="~/Content/Css/Personal_ManitoHomepage.css" rel="stylesheet" />
+    <link href="~/Content/layui/css/layui.css" rel="stylesheet" />
+    <link href="~/Content/Css/Reset.css" rel="stylesheet" />
+    <link href="~/Content/Img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+</head>
+<body>
+    @Html.Partial("_nav")
+    <div class="manitohome_message">
+        <div class="manitohome_message_container">
+            <div class="manitohome_head_cont">
+                <img class="manitohome_head" src="~/Content/Img/use_img.jpg" />
+                <span class="manitohome_head_six weman"></span>
+            </div>
+            <div class="manitohome_name_cont">
+                <span class="manitohome_name">哟胡敏</span>
+                <span class="manitohome_name_manito ok"></span>
+                <span class="manitohome_name_recreation"></span>
+            </div>
+            <p class="manitohome_city">杭州市</p>
+            <p class="manitohome_intro">这个人很懒，什么都没有留下。</p>
+            <div class="manitohome_order_btn_cont">
+                <button class="manitohome_order_btn">开始抢单</button>
+            </div>
+            <div class="manitohome_fans_cont">
+                <div class="manitohome_fans_attention fl">
+                    <p>关注</p>
+                    <span class="fans_attention_nub">12345</span>
+                </div>
+                <div class="manitohome_fans_fans fl">
+                    <p>粉丝</p>
+                    <span class="fans_fans_nub">234235</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="manitohome_type">
+        <span class="manitohome_type_manito active">大神-上分</span>
+        <span class="manitohome_type_racreation ">娱乐-陪玩</span>
+    </div>
+    <div class="manitohome_result">
+        
+    </div>
+    <!--认证游戏-->
+    <div class="manitohome_game_cont">
+        <!--没有认证-->
+        <div class="approve_no display">
+            <!--.nothing_img.recreation:陪玩的背景 .nothing_img.top 上分额背景-->
+            <div class="nothing_img recreation"></div>
+            <p class="nothing_text">矮油~木有认证上分大神</p>
+        </div>
+        <!--上分-->
+        <div class="manitohome_game_msg">
+            <div class="game_top">
+                <div class="game_msg_cont fl">
+                    <div class="game_msg_img">
+                        <img src="~/Content/Img/KingOfGlory.png" />
+                    </div>
+                    <div class="game_msg_txt clearfix">
+                        <div class="fl">
+                            <p>大神等级</p>
+                            <span class="game_txt_grade"><a href="#">普通</a></span>
+                            <a class="upgrade ok" href="/"></a>
+                        </div>
+                        <div class="fl">
+                            <p>接单总数</p>
+                            <span class="game_txt_num">1000</span>
+                        </div>
+                        <div class="fl">
+                            <p>接单胜率</p>
+                            <span class="game_txt_rate">100%</span>
+                        </div>
+                    </div>
+                    <div class="game_msg_set">
+                        <span>接单设置</span>
+                    </div>
+                </div>
+                <div class="right_game_msg fl">
+                    <!--复审未通过-->
+                    <div class="right_game_nopass ">
+                        <div class="game_nopass_item">
+                            <p><span class="circle"></span>初审资料提交</p>
+                            <span>2018-02-02 18:20:22</span>
+                        </div>
+                        <div class="game_nopass_item">
+                            <p><span class="circle"></span>初审通过，进入实力复审</p>
+                            <span>2018-02-02 18:20:22</span>
+                        </div>
+                        <div class="game_nopass_item display">
+                            <p><span class="circle"></span>初审未通过，<a class="hover" href="#">重新认证</a> 或 <a class="hover" href="#">取消认证</a></p>
+                            <span>2018-02-02 18:20:22</span>
+                        </div>
+                        <div class="game_nopass_item">
+                            <p><span class="circle"></span>复审未通过，<a class="hover" href="#">重新认证</a> 或 <a class="hover" href="#">取消认证</a></p>
+                            <span>2018-02-02 18:20:22</span>
+                        </div>
+                    </div>
+                    <!--复审已通过-->
+                    <div class="right_game_pass display">
+                        <!--没有评价-->
+                        <div class="no_message_cont display">
+                            <img class="no_message" src="~/Content/Img/no_message.png" />
+                            <p>暂未收到评价</p>
+                        </div>
+                        <!--有评价-->
+                        <p class="right_message_num_cont">客户评价 ( <span class="right_message_num">288</span> ) </p>
+                        <div class="right_message_cont">
+                            <div class="right_message_item">
+                                <div class="user_head fl">
+                                    <img src="~/Content/Img/use_img.jpg" />
+                                </div>
+                                <div class="user_message fl">
+                                    <span class="user_name">用户名：</span>
+                                    <p class="user_txt">看数据按计划拉伸大幅压缩的空间哈市可点击看数据按计划拉伸大幅压缩的空间哈市可点击看数据按计划拉伸大幅压缩的空间哈市可点击</p>
+                                </div>
+                                <div class="user_info fr">
+                                    <span class="user_time">2018年02月01号</span>
+                                    <p class="user_grade">
+                                        <i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star dark"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="right_message_item">
+                                <div class="user_head fl">
+                                    <img src="~/Content/Img/use_img.jpg" />
+                                </div>
+                                <div class="user_message fl">
+                                    <span class="user_name">用户名：</span>
+                                    <p class="user_txt">看数据按计划拉伸大幅压缩的空间哈市可点大幅压缩的空间哈市可点击</p>
+                                </div>
+                                <div class="user_info fr">
+                                    <span class="user_time">2018年02月01号</span>
+                                    <p class="user_grade">
+                                        <i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star dark"></i>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="right_message_item">
+                                <div class="user_head fl">
+                                    <img src="~/Content/Img/use_img.jpg" />
+                                </div>
+                                <div class="user_message fl">
+                                    <span class="user_name">用户名：</span>
+                                    <p class="user_txt">看数据按计划拉伸大幅压缩的空间哈市可点击看数据按计划拉伸大幅压缩的空间哈市</p>
+                                </div>
+                                <div class="user_info fr">
+                                    <span class="user_time">2018年02月01号</span>
+                                    <p class="user_grade">
+                                        <i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star dark"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="more_message">查看更多评价</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--陪玩-->
+        <div class="manitohome_game_msg">
+            <div class="game_recreation clearfix">
+                <div class="swiper_container fl">
+                    <div class="layui-carousel" id="swiper">
+                        <div carousel-item>
+                            <img src="~/Content/Img/timg.jpg" />
+                            <img src="~/Content/Img/timg.jpg" />
+                            <img src="~/Content/Img/timg.jpg" />
+                            <img src="~/Content/Img/timg.jpg" />
+                            <img src="~/Content/Img/timg.jpg" />
+                            <img src="~/Content/Img/timg.jpg" />
+                            <img src="~/Content/Img/timg.jpg" />
+                            <img src="~/Content/Img/timg.jpg" />
+                            <img src="~/Content/Img/timg.jpg" />
+                            <img src="~/Content/Img/timg.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="game_recreation_msg fl">
+                    <div class="game_name_tab">
+                        <span class="active">王者荣耀</span><span>绝地求生</span><span>DOTA2</span>
+                    </div>
+                    <div class="game_price_cont">
+                        <img class="game_logo" src="~/Content/Img/KingOfGlory_recreation.png" />
+                        <ul>
+                            <li>
+                                <span>认证段位</span>
+                                <p>王者1-10星</p>
+                            </li>
+                            <li>
+                                <span>线上价格</span>
+                                <p>5元/局</p>
+                            </li>
+                            <li>
+                                <span>线下价格</span>
+                                <p>99元/小时</p>
+                            </li>
+                            <li>
+                                <span>接单总数</span>
+                                <p>123</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--初审通过-->
+                    @*<div class="game_label_cont">
+                        <span class="game_label_cont_title">陪打标签：</span>
+                        <ul>
+                            <li>语音陪打</li>
+                            <li>带你飞</li>
+                            <li>包星包赢</li>
+                            <li>语音陪打</li>
+                            <li>语音陪打</li>
+                            <li>语音陪打</li>
+                            <li>语音陪打</li>
+                            <li>语音陪打</li>
+                        </ul>
+                    </div>
+                    <div class="game_serve_cont">
+                        <span class="game_serve_cont_title">服务说明：</span>
+                        <p class="game_serve_cont_txt">
+                            绝对王者，陪你畅玩游戏，可语音陪打，赢得的装备都归你所有。绝对王者，陪你畅玩游戏，可语音陪打，赢得的装备都归你所有。绝对王者，陪你畅玩游戏，可语音陪打，赢得的装备都归你所有。绝对王者，陪你畅玩游戏，可语音陪打，赢得的装备都归你赢得的装备都归你赢得的装备都归你赢得的装备都归你...
+                        </p>
+                    </div>
+                    <div class="game_set_cont">
+                        <span>价格设置</span>
+                        <span>标签设置</span>
+                        <span>说明设置</span>
+                    </div>*@
+                    <!--初审提交-->
+                    <div class="game_apply_cont">
+                        <span class="game_apply_cont_title">审核进度：</span>
+                        <div class="game_apply_cont_txt">
+                            <div class="game_nopass_item">
+                                <p><span class="circle"></span>初审通过，进入实力复审</p>
+                                <span>2018-02-02 18:20:22</span>
+                            </div>
+                            <div class="game_nopass_item">
+                                <p><span class="circle"></span>初审未通过，<a class="hover" href="#">重新认证</a> 或 <a class="hover" href="#">取消认证</a></p>
+                                <span>2018-02-02 18:20:22</span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!--添加游戏-->
+        <div class="add_game_approve">
+            <span>添加游戏认证</span>
+        </div>
+        <!--陪玩的评价和访客-->
+        <div class="recreation_evaluate_visitor_cont clearfix">
+            <div class="recreation_evaluate_cont fl">
+                <p class="right_message_num_cont">客户评价 ( <span class="right_message_num">288</span> ) </p>
+                <!--没有评价-->
+                <div class="no_message_cont">
+                    <img class="no_message" src="~/Content/Img/no_message.png" />
+                    <p>暂未收到评价</p>
+                </div>
+                <!--有评价-->
+                @*<div class="right_message_cont">
+                    <div class="right_message_item">
+                        <div class="user_head fl">
+                            <img src="~/Content/Img/use_img.jpg" />
+                        </div>
+                        <div class="user_message fl">
+                            <span class="user_name">用户名：</span>
+                            <p class="user_txt">看数据按计划拉伸大幅压缩的空间哈市可点击看数据按计划拉伸大幅压缩的空间哈市可点击看数据按计划拉伸大幅压缩的空间哈市可点击</p>
+                        </div>
+                        <div class="user_info fr">
+                            <span class="user_time">2018年02月01号</span>
+                            <p class="user_grade">
+                                <i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star dark"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right_message_item">
+                        <div class="user_head fl">
+                            <img src="~/Content/Img/use_img.jpg" />
+                        </div>
+                        <div class="user_message fl">
+                            <span class="user_name">用户名：</span>
+                            <p class="user_txt">看数据按计划拉伸大幅压缩的空间哈市可点大幅压缩的空间哈市可点击</p>
+                        </div>
+                        <div class="user_info fr">
+                            <span class="user_time">2018年02月01号</span>
+                            <p class="user_grade">
+                                <i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star dark"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right_message_item">
+                        <div class="user_head fl">
+                            <img src="~/Content/Img/use_img.jpg" />
+                        </div>
+                        <div class="user_message fl">
+                            <span class="user_name">用户名：</span>
+                            <p class="user_txt">看数据按计划拉伸大幅压缩的空间哈市可点击看数据按计划拉伸大幅压缩的空间哈市</p>
+                        </div>
+                        <div class="user_info fr">
+                            <span class="user_time">2018年02月01号</span>
+                            <p class="user_grade">
+                                <i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star light"></i><i class="user_star dark"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>*@
+            </div>
+            <div class="recreation_visitor_cont fl">
+                <p class="right_message_num_cont">最近来访</p>
+                <ul>
+                    <li>
+                        <img src="~/Content/Img/use_img.jpg" />
+                        <p class="name">草拟吗</p>
+                        <p class="time">刚刚</p>
+                    </li>
+                    <li>
+                        <img src="~/Content/Img/use_img.jpg" />
+                        <p class="name">草拟吗</p>
+                        <p class="time">刚刚</p>
+                    </li>
+                    <li>
+                        <img src="~/Content/Img/use_img.jpg" />
+                        <p class="name">草拟吗</p>
+                        <p class="time">刚刚</p>
+                    </li>
+                    <li>
+                        <img src="~/Content/Img/use_img.jpg" />
+                        <p class="name">草拟吗</p>
+                        <p class="time">刚刚</p>
+                    </li>
+                    <li>
+                        <img src="~/Content/Img/use_img.jpg" />
+                        <p class="name">草拟吗</p>
+                        <p class="time">刚刚</p>
+                    </li>
+                    <li>
+                        <img src="~/Content/Img/use_img.jpg" />
+                        <p class="name">草拟吗</p>
+                        <p class="time">刚刚</p>
+                    </li>
+                    <li>
+                        <img src="~/Content/Img/use_img.jpg" />
+                        <p class="name">草拟吗</p>
+                        <p class="time">刚刚</p>
+                    </li>
+                    <li>
+                        <img src="~/Content/Img/use_img.jpg" />
+                        <p class="name">草拟吗</p>
+                        <p class="time">刚刚</p>
+                    </li>
+                    <li>
+                        <img src="~/Content/Img/use_img.jpg" />
+                        <p class="name">草拟吗</p>
+                        <p class="time">刚刚</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </div>
+</body>
+</html>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Content/layui/layui.js"></script>
+<script src="~/Content/Js/ManitoHomepage.js"></script>
+<script>
+    layui.use('carousel', function () {
+        var carousel = layui.carousel;
+        //建造实例
+        carousel.render({
+            elem: '#swiper'
+          , width: '420px' //设置容器宽度
+          , height:'500px'
+          , arrow: 'none' //始终显示箭头
+            //,anim: 'updown' //切换动画方式
+        });
+    });
+</script>

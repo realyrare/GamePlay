@@ -153,11 +153,13 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\Filter\CustomerAttribute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\SystemManage\SystemManageAreaRegistration.cs" />
     <Compile Include="Areas\UserManage\Controllers\LoginController.cs" />
     <Compile Include="Areas\UserManage\Controllers\RegeisterController.cs" />
     <Compile Include="Areas\UserManage\Controllers\TestController.cs" />
+    <Compile Include="Areas\UserManage\Controllers\UserController.cs" />
     <Compile Include="Areas\UserManage\UserManageAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -261,8 +263,19 @@
     <Content Include="bin\ApplicationInsights.config" />
     <Content Include="Areas\UserManage\Views\Login\Index.cshtml" />
     <Content Include="Areas\UserManage\Views\Regeister\Index.cshtml" />
+    <Content Include="Areas\UserManage\Views\Regeister\RegisterOther.cshtml" />
+    <Content Include="Areas\UserManage\Views\Regeister\ForgetPwd.cshtml" />
+    <Content Include="Areas\UserManage\Views\User\Index.cshtml" />
+    <Content Include="Areas\UserManage\Views\User\Welcome.cshtml" />
+    <Content Include="Areas\UserManage\Views\User\ManitoApply.cshtml" />
+    <Content Include="Areas\UserManage\Views\User\ManitoTop.cshtml" />
+    <Content Include="Areas\UserManage\Views\User\ManitoRecreation.cshtml" />
+    <Content Include="Areas\UserManage\Views\User\OrderReceivRecord.cshtml" />
+    <Content Include="Areas\UserManage\Views\User\OrderPlaceRecord.cshtml" />
+    <Content Include="Areas\UserManage\Views\User\ManitoHomepage.cshtml" />
     <None Include="bin\FengTe.GamePlay.Web.dll.config" />
     <Content Include="Config\System.config" />
+    <Content Include="Config\log4net.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -286,10 +299,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_nav.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="App_Start\Filter\" />
     <Folder Include="Areas\SystemManage\Controllers\" />
     <Folder Include="Areas\SystemManage\Models\" />
     <Folder Include="Areas\SystemManage\Views\Shared\" />

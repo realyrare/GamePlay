@@ -6,12 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.IO;
+using System.Web;
+
 namespace FengTe.GamePlay.Repository
 {
   public  class ConnectionFactory
     {
-        private static readonly string ConnString = ConfigurationManager.ConnectionStrings["MSSQL_GamePlayDB"].ConnectionString;
-     
+        private static readonly string ConnString = ConfigurationManager.ConnectionStrings["MSSQL_GamePlayDB"].ConnectionString;       
         private static readonly string ConnStringType = ConfigurationManager.AppSettings["ConnMsSql"];
 
         #region 单例模式

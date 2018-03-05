@@ -48,25 +48,27 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
                     UserPwd=userInfo.Password,
                    Last_Login_IP=userInfo.Last_Login_IP,
                    Last_Login_Time=userInfo.Last_Login_Time,
-                   LoginToken=DESEncrypt.Decrypt(Guid.NewGuid().ToString())
+                   LoginToken=DESEncrypt.Encrypt(Guid.NewGuid().ToString())
                 };
                 OperatorProvider<FrontCurrentUser> provider = new OperatorProvider<FrontCurrentUser>();
                 provider.AddCurrent(currentUser);
                 //写日志
                 log.Title = userInfo.UserName;
-                log.Msg = "登录成功";               
+                log.Msg = "个人中心用户登录成功";
+                log.IP = Net.Ip;             
                 IocUtils.Resolve<ILogService>().Insert(log);
                 // Session["current_user"] = userInfo;
                 if (!string.IsNullOrEmpty(isCheck))
                 {
                     CookieHelper.SetCookie("sb1", userInfo.UserName, DateTime.Now.AddDays(7));
-                    CookieHelper.SetCookie("sb2", DESEncrypt.Decrypt(userInfo.Password), DateTime.Now.AddDays(7));
+                    CookieHelper.SetCookie("sb2", DESEncrypt.Encrypt(userInfo.Password), DateTime.Now.AddDays(7));
                 }
                 return Content(msg);
             }                         
             else {
                 log.Title = userInfo.UserName;
-                log.Msg = "登录失败"+msg;
+                log.Msg = "个人中心用户登录失败" + msg;
+                log.IP = Net.Ip;
                 IocUtils.Resolve<ILogService>().Insert(log);
                 return Content(msg);
             }          

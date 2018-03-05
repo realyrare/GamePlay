@@ -28,5 +28,6 @@ namespace FengTe.GamePlay.Entity
         /// 后台当前的管理用户
         /// </summary>
         public int ManageUser_Id { get; set; }
+        public string  IP { get; set; }
     }
 }

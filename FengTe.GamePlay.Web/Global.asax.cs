@@ -1,6 +1,7 @@
 ﻿using FengTe.GamePlay.Utility;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,20 +17,16 @@ namespace FengTe.GamePlay.Web
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-           
-            IocUtils.Init();
-            //让log4net配置节点起作用
-            log4net.Config.XmlConfigurator.Configure();
+            BundleConfig.RegisterBundles(BundleTable.Bundles);           
+            IocUtils.Init();           
+            FileInfo configFile = new FileInfo(HttpContext.Current.Server.MapPath("/Config/log4net.config"));
+            log4net.Config.XmlConfigurator.Configure(configFile);
         }
-
         public void Application_Error(object send, EventArgs e)
         {
              //记录日志
-            Exception ex = Server.GetLastError();
-            string errorMsg = ex.ToString();         
-            LogHelper.WriteLog(errorMsg);
-            //   //转到错误页或者跳转。
+            Exception ex = Server.GetLastError();               
+            LogHelper.WriteLog(ex.ToString());          
             // Response.Redirect("/Home/Error");
         }
     }
