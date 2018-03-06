@@ -19,9 +19,14 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
             var  user = new OperatorProvider<FrontCurrentUser>().GetCurrent();
             ViewData.Model = user as FrontCurrentUser;
            ViewBag. FreezeMoney= IocUtils.Resolve<IMoneyService>().UserMoney(user.UserId, false);
-            ViewBag.UsableMoney = IocUtils.Resolve<IMoneyService>().UserMoney(user.UserId, true);
-
+           ViewBag.UsableMoney = IocUtils.Resolve<IMoneyService>().UserMoney(user.UserId, true);
+           ViewBag.FocusCount = IocUtils.Resolve<IFocusService>().GetFocusList(user.UserId, true).Count;
+           ViewBag.FansCount = IocUtils.Resolve<IFocusService>().GetFocusList(user.UserId, false).Count;
             return View();
+        }
+        public object GetGamesList()
+        {
+           return  IocUtils.Resolve<IGamesService>().GetList().ToJson();
         }
         /// <summary>
         /// 默认页

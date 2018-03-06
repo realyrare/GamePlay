@@ -78,8 +78,10 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
         {          
             Log log = new Log() {
                 Title= new OperatorProvider<FrontCurrentUser>().GetCurrent().UserAccount,
-                Msg = "安全退出系统"
-            };          
+                Msg = "个人中心用户安全退出系统",
+                IP=Net.Ip
+            };
+            IocUtils.Resolve<ILogService>().Insert(log);
             Session.Abandon();
             Session.Clear();
             new OperatorProvider<FrontCurrentUser>().RemoveCurrent();

@@ -31,10 +31,7 @@
             <p class="choose_game"><span>选择游戏：</span>(首次认证只可选择一款游戏，通过后可在 "大神主页" 继续认证其他游戏)</p>
             <div class="choose_game_cont">
                 <select class="game_name">
-                    <option value="value">选择游戏</option>
-                    <option value="value">绝地就剩</option>
-                    <option value="value">英雄联盟</option>
-                    <option value="value">王者荣耀</option>
+                    <option value="">选择游戏</option>
                 </select>
                 <select class="game_area">
                     <option value="value">选择区服</option>
@@ -96,5 +93,14 @@
             success: function (data) {
             }
         });
+    })
+    $(function () {
+        $.getJSON('/UserManage/User/GetGamesList', function (data) {
+            alert(data[0].GameName)
+            for(var i in data){
+                $('.game_name').append('<option value="' + data[i].GameName + '">' + data[i].GameName + '</option>')
+            }
+            
+        })
     })
 </script>
