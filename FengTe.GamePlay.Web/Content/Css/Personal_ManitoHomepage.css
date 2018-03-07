@@ -120,8 +120,13 @@
 .approve_no .nothing_img{
     width:195px;
     height:160px;
-    background:url(/Content/Img/no_manito.png) center center no-repeat;
     margin: 0 auto;
+}
+.approve_no .nothing_img.top{
+    background:url(/Content/Img/no_manito.png) center center no-repeat;
+}
+.approve_no .nothing_img.recreation{
+    background:url(/Content/Img/no_manito_recreation.png) center center no-repeat;
 }
 .approve_no .nothing_text{
     font-size:18px;
@@ -134,11 +139,17 @@
 .manitohome_game_msg{
     width:1100px;
     margin:0 auto;
+    
+    min-height:330px;
+}
+.manitohome_game_msg + .manitohome_game_msg{
+    margin-top:20px;
+}
+.manitohome_game_msg .game_top{
+    padding:20px 0;
+    overflow:hidden;
     border-radius:6px;
     background-color:#fff;
-    min-height:330px;
-    overflow:hidden;
-    padding:20px 0;
 }
 .manitohome_game_msg .game_msg_cont{
     width:300px;
@@ -162,7 +173,7 @@
     line-height:42px;
     color:#999;
 }
-.manitohome_game_msg .game_msg_cont .game_msg_txt span){
+.manitohome_game_msg .game_msg_cont .game_msg_txt span{
     line-height:24px;
 }
 .manitohome_game_msg .game_msg_cont .game_msg_txt .upgrade{
@@ -316,4 +327,312 @@
     background:url(/Content/Img/add_game.png) left center no-repeat ;
     text-indent:35px;
     cursor:pointer;
+}
+/*陪玩*/
+.manitohome_game_msg .game_recreation{
+    border-radius:6px;
+    background-color:#fff;
+}
+.manitohome_game_msg .game_recreation .swiper_container{
+    width:420px;
+    height:500px;
+    overflow:hidden;
+    border-top-left-radius:6px;
+    border-bottom-left-radius:6px;
+}
+.manitohome_game_msg .game_recreation .swiper_container .layui-carousel-ind ul{
+    background:none;
+    height:18px;
+}
+.manitohome_game_msg .game_recreation .swiper_container .layui-carousel-ind ul li{
+    background-color:#ffc907;
+    width:10px;
+    height:10px;
+    vertical-align:middle;
+    transition-duration: 0s;
+    -moz-transition-duration: 0s; /* Firefox 4 */
+    -webkit-transition-duration: 0s; /* Safari 和 Chrome */
+    -o-transition-duration: 0s; /* Opera */
+}
+.manitohome_game_msg .game_recreation .swiper_container .layui-carousel-ind ul li.layui-this{
+    border:4px solid #fff;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg{
+    padding:20px 20px 0 20px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_name_tab span{
+    display:inline-block;
+    line-height:40px;
+    color:#999;
+    cursor:pointer;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_name_tab span+span{
+    margin-left:20px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_name_tab span.active{
+    border-bottom:2px solid #262626;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_price_cont{
+    margin-top:10px;
+    font-size:0;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_price_cont .game_logo{
+    width:150px;
+    height:140px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_price_cont>ul{
+    display:inline-block;
+    margin-left:6px;
+    height:110px;
+    vertical-align:top;
+    padding-top:30px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_price_cont>ul>li{
+    margin-right:1px;
+    display:inline-block;
+    width:120px;
+    height:80px;
+    text-align:center;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_price_cont>ul>li>span{
+    font-size:14px;
+    color:#999;
+    line-height:28px;
+    margin-top:7px;
+    display:inline-block;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_price_cont>ul>li>p{
+    font-size:18px;
+    color:#262626;
+    line-height:40px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_label_cont{
+    margin-top:20px;
+    margin-bottom:10px;
+    font-size:0;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_label_cont .game_label_cont_title{
+    display:inline-block;
+    width:80px;
+    color:#999;
+    font-size:14px;
+    padding-left:20px;
+    background:url(/Content/Img/label.png) center left no-repeat;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_label_cont>ul{
+    display:inline-block;
+    vertical-align:top;
+    width:540px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_label_cont>ul>li{
+    display:inline-block;
+    height:30px;
+    border-radius:15px;
+    font-size:14px;
+    background-color:#fff7da;
+    margin-right:10px;
+    margin-bottom:10px;
+    line-height:30px;
+    padding:0 12px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_serve_cont{
+    font-size:0;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_serve_cont .game_serve_cont_title{
+    display:inline-block;
+    width:80px;
+    color:#999;
+    font-size:14px;
+    padding-left:20px;
+    line-height:26px;
+    background:url(/Content/Img/server.png) center left no-repeat;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_serve_cont .game_serve_cont_txt{
+    display:inline-block;
+    vertical-align:top;
+    width:540px;
+    height:78px;
+    overflow:hidden;
+    font-size:14px;
+    color:#999;
+    line-height:26px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_set_cont{
+    text-align:center;
+    margin-top:34px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_set_cont span{
+    display:inline-block;
+    width:120px;
+    height:36px;
+    line-height:36px;
+    text-align:center;
+    border:1px solid #e5e5e5;
+    cursor:pointer;
+    border-radius:4px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_set_cont span+span{
+    margin-left:10px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_set_cont span:hover{
+    border:none;
+    background-color:#fcd538;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_apply_cont{
+    
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_apply_cont .game_apply_cont_title{
+    display:inline-block;
+    width:80px;
+    color:#999;
+    font-size:14px;
+    padding-left:20px;
+    line-height:26px;
+    background:url(/Content/Img/apply_icon.png) center left no-repeat;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_apply_cont .game_apply_cont_txt{
+    display:inline-block;
+    vertical-align:top;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_apply_cont .game_apply_cont_txt .game_nopass_item {
+    line-height: 26px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_apply_cont .game_apply_cont_txt .game_nopass_item .circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #cbcbcb;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_apply_cont .game_apply_cont_txt .game_nopass_item>span {
+    font-size: 12px;
+    color: #999;
+    padding-left: 20px;
+}
+.manitohome_game_msg .game_recreation .game_recreation_msg .game_apply_cont .game_apply_cont_txt .game_nopass_item + .game_nopass_item {
+    margin-top: 20px;
+}
+
+
+.recreation_evaluate_visitor_cont{
+    width:1100px;
+    margin:0 auto;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont{
+    min-height: 290px;
+    border-left: 1px solid #f0f0f0;
+    padding-left: 20px;
+    padding-top:20px;
+    width:780px;
+    margin-top:20px;
+    background-color:#fff;
+    border-radius:6px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .no_message_cont{
+    width:195px;
+    margin:60px auto 101px auto;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .no_message_cont>p{
+    color:#999;
+    line-height:50px;
+    text-align:center;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_num_cont{
+    font-weight:bold;
+    line-height:30px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont{
+    margin-top:10px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item{
+    width:740px;
+    overflow:hidden;
+    border-bottom:1px dashed #f0f0f0;
+    padding-bottom:12px;
+    margin-top:12px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_head{
+    width:44px;
+    height:44px;
+    border-radius:100%;
+    overflow:hidden;
+    margin-right:10px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_head img{
+    width:100%;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_message .user_name{
+    font-weight:bold;
+    color:#999;
+    line-height:22px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_message .user_txt{
+    line-height:22px;
+    width:580px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_info{
+    font-size:12px;
+    color:#999;
+    line-height:22px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_grade{
+    color:#999;
+    line-height:22px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_grade .user_star{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    font-style:normal;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_grade .user_star + .user_star{
+    margin-left:5px;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_grade .user_star.light{
+    background:url(/Content/Img/star_icon_light.png) center center no-repeat;
+}
+.recreation_evaluate_visitor_cont .recreation_evaluate_cont .right_message_cont .right_message_item .user_grade .user_star.dark{
+    background:url(/Content/Img/star_icon_dark.png) center center no-repeat;
+}
+.recreation_evaluate_visitor_cont .recreation_visitor_cont{
+    width:300px;
+    margin-left:20px;
+    margin-top:20px;
+    border-radius:6px;
+    background-color:#fff;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.recreation_evaluate_visitor_cont .recreation_visitor_cont .right_message_num_cont{
+    font-weight:bold;
+    line-height:30px;
+    padding-left:20px;
+}
+.recreation_evaluate_visitor_cont .recreation_visitor_cont ul{
+    font-size:0;
+}
+.recreation_evaluate_visitor_cont .recreation_visitor_cont ul li{
+    display:inline-block;
+    width:100px;
+    font-size:12px;
+    text-align:center;
+    margin-top:17px;
+}
+.recreation_evaluate_visitor_cont .recreation_visitor_cont ul li img{
+    width:60px;
+    height:60px;
+    border-radius:100%;
+}
+.recreation_evaluate_visitor_cont .recreation_visitor_cont ul li p{
+    line-height:18px;
+}
+.recreation_evaluate_visitor_cont .recreation_visitor_cont ul li p.name{
+    margin-top:4px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.recreation_evaluate_visitor_cont .recreation_visitor_cont ul li p.time{
+    color:#999;
 }

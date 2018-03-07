@@ -47,6 +47,8 @@
     <Compile Include="EatChook_GameResult.cs" />
     <Compile Include="Enum\LoginResult.cs" />
     <Compile Include="Focus.cs" />
+    <Compile Include="GameAreaService.cs" />
+    <Compile Include="GameRating.cs" />
     <Compile Include="GameResult.cs" />
     <Compile Include="Games.cs" />
     <Compile Include="Log.cs" />

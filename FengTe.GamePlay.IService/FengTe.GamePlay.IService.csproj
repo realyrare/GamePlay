@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="IBaseService.cs" />
     <Compile Include="IFocusService.cs" />
+    <Compile Include="IGameAreaService.cs" />
+    <Compile Include="IGameRatingService.cs" />
     <Compile Include="IGamesService.cs" />
     <Compile Include="ILogService.cs" />
     <Compile Include="IMoneyService.cs" />

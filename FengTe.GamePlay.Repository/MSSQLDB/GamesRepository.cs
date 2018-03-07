@@ -18,7 +18,7 @@ namespace FengTe.GamePlay.Repository
         }
         public IEnumerable<Games> GetList()
         {
-            string sql = "select GameId,GameName,AreaService,Rating  from  Games ";
+            string sql = "select GameId,GameName from  Games ";
             using (var conn=ConnectionFactory.Connection())
             {
                return  conn.Query<Games>(sql);

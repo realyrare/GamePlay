@@ -14,6 +14,7 @@
     <meta name="description" content="">
     <link href="~/Content/Css/Reset.css" rel="stylesheet" />
     <link href="~/Content/Css/Personal_index.css" rel="stylesheet" />
+    <link href="~/Content/Css/Personal_ManitoHomepage.css" rel="stylesheet" />
     <link href="~/Content/Css/Personal_ManitoTop.css" rel="stylesheet" />
     <link href="~/Content/Img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 </head>
@@ -96,11 +97,33 @@
     })
     $(function () {
         $.getJSON('/UserManage/User/GetGamesList', function (data) {
-            alert(data[0].GameName)
             for(var i in data){
-                $('.game_name').append('<option value="' + data[i].GameName + '">' + data[i].GameName + '</option>')
+                $('.game_name').append('<option value="' + data[i].GameId + '">' + data[i].GameName + '</option>')
             }
             
+        })
+        $('.game_name').change(function () {
+            $('.game_area').empty();
+            $('.game_value').empty();
+            $('.game_area').append('<option value="value">选择区服</option>');
+            $('.game_value').append('<option value="value">选择段位</option>');
+            $.ajax({
+                url: '/UserManage/User/GetGameRatingList',
+                data: {
+                    gameId: $(this).val()
+                },
+                type: 'post',
+                success: function (data) {
+                    var Area = $.parseJSON(data.Area),
+                        Rating = $.parseJSON(data.Rating);
+                    for (var i in Area) {
+                        $('.game_area').append('<option value="' + Area[i].Id + '">' + Area[i].AreaName + '</option>')
+                    }
+                    for (var j in Rating) {
+                        $('.game_value').append('<option value="' + Rating[j].Id + '">' + Rating[j].RatingName + '</option>')
+                    }
+                }
+            })
         })
     })
 </script>

@@ -28,6 +28,13 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
         {
            return  IocUtils.Resolve<IGamesService>().GetList().ToJson();
         }
+     
+        public JsonResult GetGameRatingList(int gameId)
+        {
+            var ratingList= IocUtils.Resolve<IGameRatingService>().GetList(gameId).ToJson();
+            var areaList= IocUtils.Resolve<IGameAreaService > ().GetList(gameId).ToJson();         
+            return Json(new { Rating = ratingList, Area = areaList }, JsonRequestBehavior.AllowGet);
+        }
         /// <summary>
         /// 默认页
         /// </summary>

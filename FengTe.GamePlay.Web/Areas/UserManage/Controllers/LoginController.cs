@@ -23,17 +23,17 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
         {
             if (string.IsNullOrEmpty(str))
             {
-                return Content("提示：请输入您的用户名或手机号！");
+                return Content("no,提示：请输入您的用户名或手机号！");
             }
             if (string.IsNullOrEmpty(pwd))
             {
-                return Content("提示：请输入您的登录密码！");
+                return Content("no,提示：请输入您的登录密码！");
             }
             // 校验验证码
             var session = Session["user_vcode"].ToString()==null?"": Session["user_vcode"].ToString();
             if (string.IsNullOrEmpty(vcode)||session!= vcode.ToString())
             {
-                return Content("提示：验证码错误！");
+                return Content("no,提示：验证码错误！");
             }          
             string msg = string.Empty;
             User userInfo = null;

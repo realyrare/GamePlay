@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="IBaseRepository.cs" />
     <Compile Include="IFocusRepository.cs" />
+    <Compile Include="IGameAreaServiceRepository.cs" />
+    <Compile Include="IGameRatingRepository.cs" />
     <Compile Include="IGamesRepository.cs" />
     <Compile Include="IMoneyRepository.cs" />
     <Compile Include="IUserRepository.cs" />

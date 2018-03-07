@@ -58,7 +58,7 @@ namespace FengTe.GamePlay.Utility
             {
                 Value = cookievalue,
                 Expires = expires
-            };
+            };          
             HttpContext.Current.Response.Cookies.Add(cookie);
         }
     }

@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionFactory.cs" />
+    <Compile Include="MSSQLDB\GameAreaServiceRepository.cs" />
+    <Compile Include="MSSQLDB\GameRatingRepository.cs" />
     <Compile Include="MSSQLDB\GamesRepository.cs" />
     <Compile Include="MSSQLDB\FocusRepository.cs" />
     <Compile Include="MSSQLDB\LogRepository.cs" />

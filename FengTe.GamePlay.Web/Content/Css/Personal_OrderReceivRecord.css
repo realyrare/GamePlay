@@ -342,6 +342,7 @@
     border-radius:4px;
     color:#999;
     padding-left:10px;
+    outline:none;
     appearance:none;
     -moz-appearance:none;/*?Firefox?*/
     -webkit-appearance:none;/*?Safari?和?Chrome?*/
@@ -403,4 +404,30 @@
     -moz-appearance:none;/*?Firefox?*/
     -webkit-appearance:none;/*?Safari?和?Chrome?*/
     background:#f5f5f5 url(/Content/Img/user_arrows.png) 196px center no-repeat;
+}
+.game_result_other_ok{
+    width:100px;
+    height:30px;
+    border-radius:4px;
+    border:none;
+    background-color:#ffc907;
+    outline:none;
+    cursor:pointer;
+}
+.game_result_other_ok:hover{
+    background-color:#fcd538;
+}
+.game_result_other_cancel{
+    width:100px;
+    height:30px;
+    border-radius:4px;
+    border:none;
+    background-color:#fff;
+    outline:none;
+    color:#999;
+    cursor:pointer;
+    margin-left:20px;
+}
+.game_result_other_cancel:hover{
+    color:#262626;
 }

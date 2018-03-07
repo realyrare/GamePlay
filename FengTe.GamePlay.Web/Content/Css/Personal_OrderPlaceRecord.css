@@ -287,6 +287,7 @@
     margin-top:22px;
     cursor:pointer;
     line-height:14px;
+    color:#999;
 }
 .list_item .order_operation.two .order_details{
     display:inline-block;
@@ -443,6 +444,9 @@
     margin-left:40px;
     margin-right:19px;
     line-height:80px;
+}
+.place_order_btn_item .item_icon img{
+    vertical-align:middle;
 }
 .place_order_btn_item .item_t_cont{
     margin-top:12px;

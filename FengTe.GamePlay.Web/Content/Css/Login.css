@@ -1,5 +1,5 @@
 html{
-    background-color:#ffc907;
+    /*background-color:#ffc907;*/
 }
 .logo{
 	margin:70px auto 30px auto;
@@ -244,7 +244,6 @@ input::-ms-input-placeholder{
     display:inline-block;
     border-radius:4px;
     cursor:pointer;
-    pointer-events:none;
 }
 .register_w{
     width:300px;
