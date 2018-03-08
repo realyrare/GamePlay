@@ -52,6 +52,7 @@
     <Compile Include="MSSQLDB\FocusRepository.cs" />
     <Compile Include="MSSQLDB\LogRepository.cs" />
     <Compile Include="MSSQLDB\MoneyRepository.cs" />
+    <Compile Include="MSSQLDB\R_Game_User_PlayRepository.cs" />
     <Compile Include="MSSQLDB\UserRepository.cs" />
     <Compile Include="MSSQLDB\VCodeRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -23,3 +23,4 @@ E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\System.Web.Razor.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\System.Web.WebPages.Deployment.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\bin\Debug\Newtonsoft.Json.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Utility\obj\Debug\FengTe.GamePlay.Utility.csprojResolveAssemblyReference.cache

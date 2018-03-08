@@ -47,6 +47,7 @@
     <Compile Include="IGamesService.cs" />
     <Compile Include="ILogService.cs" />
     <Compile Include="IMoneyService.cs" />
+    <Compile Include="IR_Game_User_PlayService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="IVCodeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

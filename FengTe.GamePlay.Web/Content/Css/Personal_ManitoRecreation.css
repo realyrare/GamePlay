@@ -20,8 +20,11 @@
     margin-top:10px;
 }
 .row_cont input[type="file"]{
-    display:none;
     opacity:0;
+    margin-left: -106px;
+    width: 100px;
+    height: 36px;
+    vertical-align:top;
 }
 .row_cont button{
     width:100px;

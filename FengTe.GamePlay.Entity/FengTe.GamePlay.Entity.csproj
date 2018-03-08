@@ -46,8 +46,10 @@
     <Compile Include="Customer_Evaluate.cs" />
     <Compile Include="EatChook_GameResult.cs" />
     <Compile Include="Enum\LoginResult.cs" />
+    <Compile Include="Enum\ProjectType.cs" />
     <Compile Include="Focus.cs" />
     <Compile Include="GameAreaService.cs" />
+    <Compile Include="GamePrice.cs" />
     <Compile Include="GameRating.cs" />
     <Compile Include="GameResult.cs" />
     <Compile Include="Games.cs" />

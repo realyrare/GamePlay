@@ -59,8 +59,8 @@
     line-height:34px;
     margin-top:20px;
 }
-.upload_btn{
-
+.upload_btn:hover button {
+    background-color:#fcd538;
 }
 .upload_btn button{
     width:100px;
@@ -71,12 +71,12 @@
     outline:none;
     background-color:#f5f5f5;
 }
-.upload_btn button:hover{
-    background-color:#fcd538;
-}
 .upload_btn .upload_btn_file{
-    display:none !important;
     opacity:0;
+    margin-left: -106px;
+    width: 100px;
+    height: 36px;
+    vertical-align:top;
 }
 .upload_show_img{
     width:680px;

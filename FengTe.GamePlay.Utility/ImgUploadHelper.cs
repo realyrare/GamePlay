@@ -41,7 +41,7 @@ namespace FengTe.GamePlay.Utility
                     file.SaveAs(fullDir);
                   
                 }
-                return msg = fullDir;
+                return msg = filePath + fileName;
             }
             else
             {

@@ -24,7 +24,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
 
         public IList<GameRating> GetList(int gameId)
         {
-            string sql = "select Id,  RatingName,Price  from GameRating where  Games_GameId=@GameId";
+            string sql = "select Id,  RatingName from GameRating where  Games_GameId=@GameId";
             using (var conn = ConnectionFactory.Connection())
             {
                 return conn.Query<GameRating>(sql, new { GameId = gameId }).ToList();

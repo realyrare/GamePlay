@@ -51,5 +51,7 @@ namespace FengTe.GamePlay.Entity
         /// 认证类型：1、陪玩2、大神
         /// </summary>
         public int Type { get; set; }
+        public int GameRatingId { get; set; }
+        public int GameAreaId { get; set; }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using FengTe.GamePlay.Code;
+using FengTe.GamePlay.Entity;
+using FengTe.GamePlay.Entity.Enum;
 using FengTe.GamePlay.IService;
 using FengTe.GamePlay.Utility;
 using FengTe.GamePlay.Web.App_Start.Filter;
@@ -34,6 +36,36 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
             var ratingList= IocUtils.Resolve<IGameRatingService>().GetList(gameId).ToJson();
             var areaList= IocUtils.Resolve<IGameAreaService > ().GetList(gameId).ToJson();         
             return Json(new { Rating = ratingList, Area = areaList }, JsonRequestBehavior.AllowGet);
+        }
+        /// <summary>
+        /// 大神申请-游戏初步认证
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult MainToGameApply(int gameId,int ratingId,int areaId,string ratingImg)
+        {
+            R_Game_User_Play game = new R_Game_User_Play()
+            {
+                    GameRating_CutImg=ratingImg,
+                    Type=(int)ProjectType.Manito,
+                    User_UserId= new OperatorProvider<FrontCurrentUser>().GetCurrent().UserId,
+                    Games_GameId=gameId,
+                    GameAreaId=areaId,
+                    GameRatingId=ratingId
+            };
+            if (IocUtils.Resolve<IR_Game_User_PlayService>().Insert(game) > 0)
+            {
+                return Content("ok");
+            }
+            else {
+                return Content("no");
+            }
+        }
+        public ActionResult MainToUploadImg()
+        {           
+           HttpPostedFileBase file = Request.Files["img"];         
+            string msg = string.Empty,filePath="/Content/GameImg/";     
+            msg = ImgUploadHelper.CommonUploadImg(file, out msg, filePath);
+            return Content(msg);
         }
         /// <summary>
         /// 默认页

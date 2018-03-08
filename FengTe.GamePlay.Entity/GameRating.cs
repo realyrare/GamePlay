@@ -12,8 +12,7 @@ namespace FengTe.GamePlay.Entity
   public  class GameRating
     {
         public int Id { get; set; }
-        public string RatingName { get; set; }
-        public int Price { get; set; }
+        public string RatingName { get; set; }       
         public DateTime InTime { get; set; }
         public int Games_GameId { get; set; }
     }

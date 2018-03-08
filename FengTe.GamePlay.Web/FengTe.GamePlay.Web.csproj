@@ -245,6 +245,7 @@
     <Content Include="Content\Img\timg.jpg" />
     <Content Include="Content\Js\Login.js" />
     <Content Include="Content\Js\ManitoHomepage.js" />
+    <Content Include="Content\Js\MyAjaxForm.js" />
     <Content Include="Content\Js\myExtend.js" />
     <Content Include="Content\Js\personal_index.js" />
     <Content Include="Content\Js\Personal_ManitoRecreation.js" />
@@ -317,6 +318,7 @@
     <Folder Include="Areas\UserManage\Views\Shared\" />
     <Folder Include="bin\roslyn\" />
     <Folder Include="bin\zh-Hans\" />
+    <Folder Include="Content\GameImg\" />
     <Folder Include="Content\layui\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />

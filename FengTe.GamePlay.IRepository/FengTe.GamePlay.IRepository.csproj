@@ -46,6 +46,7 @@
     <Compile Include="IGameRatingRepository.cs" />
     <Compile Include="IGamesRepository.cs" />
     <Compile Include="IMoneyRepository.cs" />
+    <Compile Include="IR_Game_User_PlayRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="IVCodeRepository.cs" />
     <Compile Include="ILogRepository.cs" />
