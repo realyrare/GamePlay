@@ -155,17 +155,14 @@
             <div class="row_cont">
                 <span class="row_title">个人照片：</span>
                 <button class="self_btn">点击上传</button>
-                <input type="file" name="self" value=" " />
+                <input class="self_file" type="file" name="self" value=" " multiple />
                 <span class="row_msg">必须为露脸真实个人照片否则无法通过审核。做多上传9张。尺寸要求：</span>
             </div>
             <div class="row_cont row_img_cont">
                 <span class="row_title"></span>
                 <div class="self_cont">
-                    @*<span class="row_cont_img_txt">图片展示区</span>*@
-                    <div class="self_img">
-                        <i></i>
-                        <img src="~/Content/Img/use_img.jpg" />
-                    </div>
+                    <span class="row_cont_img_txt">图片展示区</span>
+                    
                 </div>
             </div>
             <div class="row_cont">
@@ -221,3 +218,36 @@
 </html>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
 <script src="~/Content/Js/Personal_ManitoRecreation.js"></script>
+<script>
+    
+    $('.self_file').change(function (e) {
+        //var formData = new FormData(e.target.files[0]);
+        var formData = new FormData();
+        var files = $('.self_file')[0].files;
+        for (var i = 0; i < files.length; i++) {
+
+            formData.append('file', $('.self_file')[0].files[i]);
+        }
+        //console.log(formData);
+        $.ajax({
+            url: "/Ashx/Upload.ashx",
+            type: "POST",
+            data: formData,
+            processData: false,  // 告诉jQuery不要去处理发送的数据
+            contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
+            success: function (data) { 
+                data = data.substr(1, data.length - 1);
+                data = data.split('""');
+                for (var i in data) {
+                    if (data[i].split(',').length == 2) {
+                        return $.Myalert(data[i].split(',')[1])
+                    }
+                }
+                $('.self_cont span').remove();
+                for (var j in data) {
+                    $('.self_cont').append('<div class="self_img"><i></i><img src="' + data[j] + '" /></div>')
+                }
+            }
+        });
+    })
+</script>

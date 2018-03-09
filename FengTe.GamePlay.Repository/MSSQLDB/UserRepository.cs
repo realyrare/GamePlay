@@ -37,8 +37,6 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
                 return conn.Query<User>(sql,new  {name=name}).SingleOrDefault();
             }
         }
-      
-
         public int Insert(User entity)
         {
             using (var conn=ConnectionFactory.Connection())
@@ -76,9 +74,6 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
                int i= conn.Execute(sql, new { Id = entity.UserId, Last_Login_IP = entity.Last_Login_IP, Last_Login_Time = entity.Last_Login_Time });
                 return i > 0 ? true : false;
             }
-        }
-
-      
-       
+        }     
     }
 }

@@ -73,10 +73,10 @@
 }
 .upload_btn .upload_btn_file{
     opacity:0;
-    margin-left: -106px;
+    /*margin-left: -106px;
     width: 100px;
     height: 36px;
-    vertical-align:top;
+    vertical-align:top;*/
 }
 .upload_show_img{
     width:680px;

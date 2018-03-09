@@ -24,7 +24,11 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
 
         public R_Game_User_Play GetModel(int id = 1, string name = null)
         {
-            throw new NotImplementedException();
+            string sql = "select top 1 State,type,Games_GameId,InTime from R_Game_User_Play where User_UserId=@UserId order by intime asc  ";
+            using (var conn=ConnectionFactory.Connection())
+            {
+               return  conn.Query<R_Game_User_Play>(sql,new { UserId = id}).SingleOrDefault();
+            }
         }
 
         public int Insert(R_Game_User_Play entity)

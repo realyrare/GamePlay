@@ -161,6 +161,9 @@
     <Compile Include="Areas\UserManage\Controllers\TestController.cs" />
     <Compile Include="Areas\UserManage\Controllers\UserController.cs" />
     <Compile Include="Areas\UserManage\UserManageAreaRegistration.cs" />
+    <Compile Include="Ashx\Upload.ashx.cs">
+      <DependentUpon>Upload.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -255,7 +258,6 @@
     <Content Include="Content\Js\UseInfo.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -281,6 +283,7 @@
     <Content Include="Areas\UserManage\Views\User\OrderReceivRecord.cshtml" />
     <Content Include="Areas\UserManage\Views\User\OrderPlaceRecord.cshtml" />
     <Content Include="Areas\UserManage\Views\User\ManitoHomepage.cshtml" />
+    <Content Include="Ashx\Upload.ashx" />
     <None Include="bin\FengTe.GamePlay.Web.dll.config" />
     <Content Include="Config\System.config" />
     <Content Include="Config\log4net.config" />

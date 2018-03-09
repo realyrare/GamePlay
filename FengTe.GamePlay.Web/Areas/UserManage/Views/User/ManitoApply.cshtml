@@ -2,7 +2,7 @@
 @{
     Layout = null;
 }
-
+@model FengTe.GamePlay.Entity.R_Game_User_Play
 <!DOCTYPE html>
 
 <html>
@@ -27,11 +27,39 @@
                     <span>大神-上分</span>
                 </a>
                 <div class="authentication_cont">
-                    <span>初审资料提交</span>
-                    <span class="small_txt">2018-02-18 16:00</span>
-                    <p><span></span></p>
-                    <span>初审通过</span>
-                    <span>2018-02-18 16:00</span>
+                    @if (Model.State == 0)
+                    {
+                        <span>初审资料提交</span>
+                        <span class="small_txt" value="">@Model.InTime.ToString("yyyy-MM-dd HH:mm")</span>
+                    }
+                    else if (Model.State == 1)
+                    {                        
+                        <span>通过初审，进入实力复审</span>
+                        <span>@Model.InTime.ToString("yyyy-MM-dd HH:mm")</span>
+                    }
+                    else if (Model.State == 2)
+                    {
+                        
+                        <span>未通过初审</span>
+                        <span>@Model.InTime.ToString("yyyy-MM-dd HH:mm")</span>
+                    }
+                    else if (Model.State == 3)
+                    {                        
+                        <span>复审未通过</span>
+                        <span>@Model.InTime.ToString("yyyy-MM-dd HH:mm")</span>
+                    }
+                    else if (Model.State == 4)
+                    {
+                        <
+                        <span>通过复审，大神认证成功</span>
+                        <span>@Model.InTime.ToString("yyyy-MM-dd HH:mm")</span>
+                    }
+                    else
+                    {
+                        <span>未认证</span>
+                    }
+
+
                 </div>
             </div>
             <div class="manito_apply_type_recreation fl">

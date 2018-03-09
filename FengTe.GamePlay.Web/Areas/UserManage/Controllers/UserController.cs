@@ -62,11 +62,11 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
         }
         public ActionResult MainToUploadImg()
         {           
-           HttpPostedFileBase file = Request.Files["img"];         
-            string msg = string.Empty,filePath="/Content/GameImg/";     
+           HttpPostedFileBase file = Request.Files["file"];         
+           string msg = string.Empty,filePath="/Content/GameImg/";     
             msg = ImgUploadHelper.CommonUploadImg(file, out msg, filePath);
             return Content(msg);
-        }
+        }      
         /// <summary>
         /// 默认页
         /// </summary>
@@ -79,8 +79,9 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
         /// 大神申请
         /// </summary>
         /// <returns></returns>
-        public ActionResult ManitoApply()
+        public ActionResult ManitoApply(int userId)
         {
+            ViewData.Model = IocUtils.Resolve<IR_Game_User_PlayService>().GetModel(userId);
             return View();
         }
         /// <summary>
@@ -89,6 +90,7 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
         /// <returns></returns>
         public ActionResult ManitoTop()
         {
+               
             return View();
         }
         /// <summary>

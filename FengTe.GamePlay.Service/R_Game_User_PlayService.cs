@@ -25,7 +25,7 @@ namespace FengTe.GamePlay.Service
 
         public R_Game_User_Play GetModel(int id = 1, string where = null)
         {
-            throw new NotImplementedException();
+            return IocUtils.Resolve<IR_Game_User_PlayRepository>().GetModel(id);
         }
 
         public int Insert(R_Game_User_Play entity)
