@@ -93,15 +93,18 @@ E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Web.dll.config
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Web.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Web.pdb
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Code.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Entity.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.IRepository.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.IService.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Repository.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Service.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Utility.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\TopSdk.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\Dapper.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\EmitMapper.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\Autofac.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Code.pdb
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Entity.pdb
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.IRepository.pdb
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.IService.pdb
@@ -114,6 +117,3 @@ E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\obj\Debug\FengTe.GamePlay.Web.csprojResolveAssemblyReference.cache
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\obj\Debug\FengTe.GamePlay.Web.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\obj\Debug\FengTe.GamePlay.Web.pdb
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\TopSdk.dll
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Code.dll
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Web\bin\FengTe.GamePlay.Code.pdb

@@ -4,7 +4,6 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="utf-8" />
@@ -42,64 +41,16 @@
                 <span>男</span>
                 <span class="row_msg">认证后不可修改</span>
             </div>
-            <div class="row_cont">
+            <div class="row_cont" id="city_3">
                 <span class="row_title">所在城市：</span>
-                <select class="city_province" size="1">
-                    <option value="value">省份</option>
-                    <option value="value">浙江省</option>
-                    <option value="value">江苏省</option>
-                    <option value="value">上海</option>
-                    <option value="value">黑龙江</option>
-                    <option value="value">赏析</option>
-                    <option value="value">先</option>
-                    <option value="value">选啊实打实的</option>
-                    <option value="value">浙江省</option>
-                    <option value="value">江苏省</option>
-                    <option value="value">上海</option>
-                    <option value="value">黑龙江</option>
-                    <option value="value">赏析</option>
-                    <option value="value">先</option>
-                    <option value="value">黑龙江</option>
-                    <option value="value">赏析</option>
-                    <option value="value">先</option>
-                    <option value="value">选啊实打实的</option>
-                    <option value="value">浙江省</option>
-                    <option value="value">江苏省</option>
-                    <option value="value">上海</option>
-                    <option value="value">黑龙江</option>
-                    <option value="value">赏析</option>
-                    <option value="value">先</option>
-                    <option value="value">选啊实打实的</option>
-                    <option value="value">浙江省</option>
-                    <option value="value">江苏省</option>
-                    <option value="value">上海</option>
-                    <option value="value">黑龙江</option>
-                    <option value="value">赏析</option>
-                    <option value="value">先</option>
-                    <option value="value">选啊实打实的</option>
-                </select>
-                <select class="city_town">
-                    <option value="value">城市</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                </select>
+                <select class="prov"></select>
+                <select class="city" disabled="disabled"></select>
             </div>
             <div class="row_cont">
                 <span class="row_title">选择游戏：</span>
-                <select class="gama_name">
+                <select class="game_name">
                     <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
-                    <option value="value">选择游戏</option>
+                  
                 </select>
                 <select class="game_area">
                     <option value="value">选择区服</option>
@@ -139,7 +90,7 @@
                     <option value="有车队">有车队</option>
                     <option value="打野">打野</option>
                 </select>
-                <input class="self_label" type="text" name="selt_lebel"  placeholder="输入自定义标签，按回车添加"/>
+                <input class="self_label" type="text" name="selt_lebel" placeholder="输入自定义标签，按回车添加" />
                 <span class="row_msg">最多设置10个标签</span>
             </div>
             <div class="row_cont row_img_cont">
@@ -162,7 +113,7 @@
                 <span class="row_title"></span>
                 <div class="self_cont">
                     <span class="row_cont_img_txt">图片展示区</span>
-                    
+
                 </div>
             </div>
             <div class="row_cont">
@@ -217,37 +168,115 @@
 </body>
 </html>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Content/Js/City/jquery.cityselect.js"></script>
 <script src="~/Content/Js/Personal_ManitoRecreation.js"></script>
-<script>
-    
-    $('.self_file').change(function (e) {
-        //var formData = new FormData(e.target.files[0]);
+<script type="text/javascript">
+    $("#city_3").citySelect({
+        prov: "湖南",
+        city: "长沙"
+    });
+    function uploadimg() {
+        $('.upload_btn_file').trigger('click');
+    }
+    $('.upload_btn_file').change(function (e) {
         var formData = new FormData();
-        var files = $('.self_file')[0].files;
-        for (var i = 0; i < files.length; i++) {
-
-            formData.append('file', $('.self_file')[0].files[i]);
-        }
-        //console.log(formData);
+        formData.append('file', $('.upload_btn_file')[0].files[0]);
         $.ajax({
-            url: "/Ashx/Upload.ashx",
+            url: "/UserManage/User/MainToUploadImg",
             type: "POST",
             data: formData,
             processData: false,  // 告诉jQuery不要去处理发送的数据
             contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
-            success: function (data) { 
-                data = data.substr(1, data.length - 1);
-                data = data.split('""');
-                for (var i in data) {
-                    if (data[i].split(',').length == 2) {
-                        return $.Myalert(data[i].split(',')[1])
-                    }
-                }
-                $('.self_cont span').remove();
-                for (var j in data) {
-                    $('.self_cont').append('<div class="self_img"><i></i><img src="' + data[j] + '" /></div>')
+            success: function (data) {
+                var msgData = data.split(',');
+                if (msgData[0] == "empty") {
+                    $.Myalert(msgData[1]);
+                } else if (msgData[0] == 'typeError') {
+                    $.Myalert(msgData[1]);
+                } else {
+                    $('.upload_show_img').empty();
+                    $('.upload_show_img').append('<img src="' + data + '" />')
                 }
             }
         });
-    })
+    });
+    //个人照片批量上传
+        $('.self_file').change(function (e) {     
+            var formData = new FormData();
+            var files = $('.self_file')[0].files;
+            for (var i = 0; i < files.length; i++) {
+                formData.append('file', $('.self_file')[0].files[i]);
+            }
+            //console.log(formData);
+            $.ajax({
+                url: "/Ashx/Upload.ashx",
+                type: "POST",
+                data: formData,
+                processData: false,  // 告诉jQuery不要去处理发送的数据
+                contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
+                success: function (data) {
+                    data = data.substr(1, data.length - 1);
+                    data = data.split('""');
+                    for (var i in data) {
+                        if (data[i].split(',').length == 2) {
+                            return $.Myalert(data[i].split(',')[1])
+                        }
+                    }
+                    $('.self_cont span').remove();
+                    for (var j in data) {
+                        $('.self_cont').append('<div class="self_img"><i></i><img src="' + data[j] + '" /></div>')
+                    }
+                }
+            });
+        })
+    //游戏二级联动加载
+        $(function () {
+            $.getJSON('/UserManage/User/GetGamesList', function (data) {
+                for (var i in data) {
+                    $('.game_name').append('<option value="' + data[i].GameId + '">' + data[i].GameName + '</option>')
+                }
+            })
+            $('.game_name').change(function () {
+                $('.game_area').empty();
+                $('.game_value').empty();
+                $('.game_area').append('<option value="value">选择区服</option>');
+                $('.game_value').append('<option value="value">选择段位</option>');
+                $.ajax({
+                    url: '/UserManage/User/GetGameRatingList',
+                    data: { gameId: $(this).val() },
+                    type: 'post',
+                    success: function (data) {
+                        var Area = $.parseJSON(data.Area),
+                            Rating = $.parseJSON(data.Rating);
+                        for (var i in Area) {
+                            $('.game_area').append('<option value="' + Area[i].Id + '">' + Area[i].AreaName + '</option>')
+                        }
+                        for (var j in Rating) {
+                            $('.game_value').append('<option value="' + Rating[j].Id + '">' + Rating[j].RatingName + '</option>')
+                        }
+                    }
+                })
+            });
+        });
+        $(function () {
+            $('.recreation_check_btn').click(function () {
+                $.ajax({
+                    url: '/UserManage/User/ManitoFunPlay',
+                    data: {
+                        homeImg: $().val(), sex: $().val(), city: $('.prov').val() + ',' + $('.city').val(),
+                        photo: $().val(), audio: $().val(), gameId: $('.game_name').val(), ratingId: $('.game_value').val(),
+                        areaId: $('.game_area').val(), ratingImg: $('.upload_show_img>img').attr('src'), onPrice: $('.online_price').val(), offPrice: $('.offline_price').val(), tagName: $().val(), serviceNote: $('.service').val(), scoreImg:$().val()
+                    },
+                    type: 'post',
+                    success: function (data) {
+                        var msgData = data.split(',');
+                        if (msgData[0] == 'ok') {
+                            Myalert(msgData[1]);
+                        } else {
+                            Myalert(msgData[1]);
+                        }
+                    }
+                });
+            });
+        });
 </script>

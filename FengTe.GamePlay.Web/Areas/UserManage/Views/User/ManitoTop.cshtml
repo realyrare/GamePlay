@@ -2,9 +2,7 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="utf-8" />
@@ -27,8 +25,7 @@
                 <span class="fl">信息初审</span>
                 <span class="fr">实力复审</span>
             </div>
-        </div>
-        
+        </div>       
             <div class="manito_top_game manito_top_step1">
                 <p class="choose_game"><span>选择游戏：</span>(首次认证只可选择一款游戏，通过后可在 "大神主页" 继续认证其他游戏)</p>
                 <div class="choose_game_cont">
@@ -86,11 +83,9 @@
     function uploadimg() {
         $('.upload_btn_file').trigger('click');
     }
-    $('.upload_btn_file').change(function (e) {
-      
+    $('.upload_btn_file').change(function (e) {     
         var formData = new FormData();
-        formData.append('file', $('.upload_btn_file')[0].files[0]);
-      
+        formData.append('file', $('.upload_btn_file')[0].files[0]);    
         $.ajax({
             url: "/UserManage/User/MainToUploadImg",
             type: "POST",
@@ -156,8 +151,7 @@
                 });
             }else{
                 $.Myalert('请阅读服务条款');
-            }
-            
+            }          
         });
     })
 </script>

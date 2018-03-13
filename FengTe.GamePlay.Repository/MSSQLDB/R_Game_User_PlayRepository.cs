@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using FengTe.GamePlay.Entity;
 using FengTe.GamePlay.Entity.Params;
 using Dapper;
+using System.Data;
 
 namespace FengTe.GamePlay.Repository.MSSQLDB
 {
@@ -31,12 +32,41 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
             }
         }
 
+        /// <summary>
+        /// 大神申请>大神上分
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
         public int Insert(R_Game_User_Play entity)
         {
             string sql = "insert  into  R_Game_User_Play(GameRating_CutImg,Type,User_UserId,Games_GameId,GameRatingId,GameAreaId) values(@GameRating_CutImg,@Type,@User_UserId,@Games_GameId,@GameRatingId,@GameAreaId) ";
             using (var conn=ConnectionFactory.Connection())
             {
                return  conn.Execute(sql,entity);
+            }
+        }
+
+        public int InsertFunPlay(R_Game_User_Play entity, User user)
+        {          
+            using (var conn = ConnectionFactory.Connection())
+            {
+               const string sql = " insert  into  R_Game_User_Play(GameRating_CutImg,Type,User_UserId,Games_GameId,GameRatingId,GameAreaId,OnlinePrice,OfflinePrice,TagName,ServiceNote,GameScore_CutImg)  values(@GameRating_CutImg, @Type, @User_UserId, @Games_GameId, @GameRatingId, @GameAreaId, @OnlinePrice, @OfflinePrice, @TagName, @ServiceNote, @GameScore_CutImg) ";
+
+                const string sql2 = " update [dbo].[User]  set  HomePage_Img=@HomePage_Img,Sex=@Sex,CurrentCity=@CurrentCity,PersonalPhoto=@PersonalPhoto,PersonalAudio=@PersonalAudio   where  UserId=@UserId";
+                IDbTransaction tran = conn.BeginTransaction();
+                try
+                {
+                 int i=   conn.Execute(sql, entity,tran);
+                   i += conn.Execute(sql2, new { UserId = user.UserId, HomePage_Img = user.HomePage_Img, Sex = user.Sex, CurrentCity = user.CurrentCity, PersonalPhoto = user.PersonalPhoto, PersonalAudio = user.PersonalAudio }, tran);
+                    tran.Commit();
+                    return i;
+                }
+                catch (Exception)
+                {
+                    tran.Rollback();
+                    throw;
+                }
+               
             }
         }
 

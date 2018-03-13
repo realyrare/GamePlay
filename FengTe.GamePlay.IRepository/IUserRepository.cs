@@ -17,5 +17,7 @@ namespace FengTe.GamePlay.IRepository
         /// <param name="ip"></param>
         /// <returns></returns>
         string OutCode(string mobile, string vcode, string ip);
+        int UserInfoUpdate(User user);
+      
     }
 }

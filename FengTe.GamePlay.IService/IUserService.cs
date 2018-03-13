@@ -26,5 +26,7 @@ namespace FengTe.GamePlay.IService
         /// <param name="ip"></param>
         /// <returns></returns>
         string OutCode(string mobile, string vcode, string ip);
+        bool UserInfoUpdate(User user);
     }
 }
+

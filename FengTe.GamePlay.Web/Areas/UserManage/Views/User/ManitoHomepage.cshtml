@@ -1,9 +1,9 @@
 ﻿@{
-    Layout = null;
+    Layout = null;  
 }
-
+@using FengTe.GamePlay.Code
+@model FrontCurrentUser
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="utf-8" />
@@ -25,23 +25,23 @@
                 <span class="manitohome_head_six weman"></span>
             </div>
             <div class="manitohome_name_cont">
-                <span class="manitohome_name">哟胡敏</span>
+                <span class="manitohome_name">@Model.UserAccount</span>
                 <span class="manitohome_name_manito ok"></span>
                 <span class="manitohome_name_recreation"></span>
             </div>
-            <p class="manitohome_city">杭州市</p>
-            <p class="manitohome_intro">这个人很懒，什么都没有留下。</p>
+            <p class="manitohome_city">@Model.CurrentCity</p>
+            <p class="manitohome_intro">@Model.Intro</p>
             <div class="manitohome_order_btn_cont">
                 <button class="manitohome_order_btn">开始抢单</button>
             </div>
             <div class="manitohome_fans_cont">
                 <div class="manitohome_fans_attention fl">
                     <p>关注</p>
-                    <span class="fans_attention_nub">12345</span>
+                    <span class="fans_attention_nub">@ViewBag.FocusCount</span>
                 </div>
                 <div class="manitohome_fans_fans fl">
                     <p>粉丝</p>
-                    <span class="fans_fans_nub">234235</span>
+                    <span class="fans_fans_nub">@ViewBag.FansCount</span>
                 </div>
             </div>
         </div>

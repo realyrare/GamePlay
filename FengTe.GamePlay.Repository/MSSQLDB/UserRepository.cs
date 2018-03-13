@@ -17,9 +17,6 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
         {
             throw new NotImplementedException();
         }
-
-       
-
         public IEnumerable<User> GetList()
         {
             using (var conn=ConnectionFactory.Connection())
@@ -27,13 +24,14 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
                 //string sql = @"select * from user ";
               return  conn.Query<User>("select username,password  from user");                
             }
-        }
-
+        }    
         public User GetModel(int id = 1, string name = null)
         {
             using (var conn = ConnectionFactory.Connection())
             {
-                string sql = "select  UserId,UserName,Password,Tel ,State,CurrentCity,Last_Login_Time,Last_Login_IP from  [dbo].[User]  where UserName=@name or Tel=@name ";           
+                string sql = @"select  UserId,UserName,Password,Tel ,State,CurrentCity,Last_Login_Time,Last_Login_IP ,Intro,
+                              OnLine_State,HeadImg
+                            from  [dbo].[User]  where UserName=@name or Tel=@name ";           
                 return conn.Query<User>(sql,new  {name=name}).SingleOrDefault();
             }
         }
@@ -44,8 +42,7 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
                 string sql = "	insert  into  [dbo].[User](UserName,Password,Tel,QQ) values(@UserName,@Password,@Tel,@QQ)";
                 return conn.Execute(sql, entity);
             }                      
-        }
-    
+        }  
         public Tuple<IEnumerable<User>, int> LoadPageEntities(int pageIndex, int PageSize, bool isAsc, QueryParam param = null)
         {
             throw new NotImplementedException();
@@ -65,7 +62,6 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
                 return outCode;
             }
         }
-
         public bool Update(User entity)
         {
             using (var conn = ConnectionFactory.Connection())
@@ -74,6 +70,15 @@ namespace FengTe.GamePlay.Repository.MSSQLDB
                int i= conn.Execute(sql, new { Id = entity.UserId, Last_Login_IP = entity.Last_Login_IP, Last_Login_Time = entity.Last_Login_Time });
                 return i > 0 ? true : false;
             }
-        }     
+        }
+        public int UserInfoUpdate(User user)
+        {
+            using (var conn = ConnectionFactory.Connection())
+            {
+                string sql = " update [dbo].[User]  set    where  UserId=@UserId";
+                int i = conn.Execute(sql, new { UserId = user.UserId });
+                return i ;
+            }
+        }
     }
 }

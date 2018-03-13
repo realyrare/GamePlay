@@ -53,5 +53,13 @@ namespace FengTe.GamePlay.Entity
         public int Type { get; set; }
         public int GameRatingId { get; set; }
         public int GameAreaId { get; set; }
+        /// <summary>
+        /// 线下价格
+        /// </summary>
+        public int OfflinePrice { get; set; }
+        /// <summary>
+        /// 线上价格
+        /// </summary>
+        public int OnlinePrice { get; set; }
     }
 }

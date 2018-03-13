@@ -48,6 +48,10 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
                     UserPwd=userInfo.Password,
                    Last_Login_IP=userInfo.Last_Login_IP,
                    Last_Login_Time=userInfo.Last_Login_Time,
+                   Intro=userInfo.Intro,
+                   HomePage_Img=userInfo.HomePage_Img,
+                   HeadImg=userInfo.HeadImg,
+                   CurrentCity=userInfo.CurrentCity,
                    LoginToken=DESEncrypt.Encrypt(Guid.NewGuid().ToString())
                 };
                 OperatorProvider<FrontCurrentUser> provider = new OperatorProvider<FrontCurrentUser>();
@@ -75,9 +79,14 @@ namespace FengTe.GamePlay.Web.Areas.UserManage.Controllers
         }
         [HttpGet]
         public ActionResult OutLogin()
-        {          
+        {
+            string title = new OperatorProvider<FrontCurrentUser>().GetCurrent().UserAccount;
+            if (string.IsNullOrEmpty(title))
+            {
+                return RedirectToAction("Index", "Login");
+            }
             Log log = new Log() {
-                Title= new OperatorProvider<FrontCurrentUser>().GetCurrent().UserAccount,
+                Title= title,
                 Msg = "个人中心用户安全退出系统",
                 IP=Net.Ip
             };

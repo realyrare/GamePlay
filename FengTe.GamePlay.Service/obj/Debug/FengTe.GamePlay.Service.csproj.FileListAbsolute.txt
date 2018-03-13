@@ -24,7 +24,13 @@ E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\FengTe.GamePlay.Utility.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\EmitMapper.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\Autofac.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\Newtonsoft.Json.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\log4net.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\TopSdk.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\System.Web.WebPages.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\System.Web.Razor.dll
+E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\System.Web.WebPages.Deployment.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\FengTe.GamePlay.Entity.pdb
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\FengTe.GamePlay.IRepository.pdb
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\FengTe.GamePlay.IService.pdb
@@ -34,9 +40,3 @@ E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\obj\Debug\FengTe.GamePlay.Service.csprojResolveAssemblyReference.cache
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\obj\Debug\FengTe.GamePlay.Service.dll
 E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\obj\Debug\FengTe.GamePlay.Service.pdb
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\TopSdk.dll
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\System.Web.WebPages.dll
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\Microsoft.Web.Infrastructure.dll
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\System.Web.Razor.dll
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\System.Web.WebPages.Deployment.dll
-E:\mhg_NewWebSite\风特源码\FengTe.GamePlay.Framework\FengTe.GamePlay.Service\bin\Debug\Newtonsoft.Json.dll

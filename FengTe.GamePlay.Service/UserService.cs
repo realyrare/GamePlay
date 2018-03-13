@@ -91,5 +91,10 @@ namespace FengTe.GamePlay.Service
         {
            return IocUtils.Resolve<IUserRepository>().Update(entity);
         }
+
+        public bool UserInfoUpdate(User user)
+        {
+            return IocUtils.Resolve<IUserRepository>().UserInfoUpdate(user)>0?true:false;
+        }
     }
 }

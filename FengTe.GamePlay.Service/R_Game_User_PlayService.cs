@@ -33,6 +33,11 @@ namespace FengTe.GamePlay.Service
             return IocUtils.Resolve<IR_Game_User_PlayRepository>().Insert(entity);
         }
 
+        public bool InsertFunPlay(R_Game_User_Play entity, User user)
+        {
+            return IocUtils.Resolve<IR_Game_User_PlayRepository>().InsertFunPlay(entity,  user) >0?true:false;
+        }
+
         public Tuple<IEnumerable<R_Game_User_Play>, int> LoadPageEntities(int pageIndex, int PageSize, bool isAsc, QueryParam param = null)
         {
             throw new NotImplementedException();

@@ -246,6 +246,7 @@
     <Content Include="Content\Img\no_manito_recreation.png" />
     <Content Include="Content\Img\server.png" />
     <Content Include="Content\Img\timg.jpg" />
+    <Content Include="Content\Js\City\jquery.cityselect.js" />
     <Content Include="Content\Js\Login.js" />
     <Content Include="Content\Js\ManitoHomepage.js" />
     <Content Include="Content\Js\MyAjaxForm.js" />
